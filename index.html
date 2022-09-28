@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+        <!-- custom css -->
+        <style type="text/tailwindcss">
+            @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+        </style>
+
+        <!-- config -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-01': '#6D114A',
+                            'primary-02': '#991968',
+                            'primary-03': '#E15090',
+                            'primary-04': '#F5A2CB',
+                            'primary-05': '#F9B8DA',
+                            'primary-06': '#FBCFE7',
+                            'primary-07': '#FDE7F3',
+                            'primary-08': '#FDF1F8',
+                            'primary-09': '#FDF6FA',
+
+                            'secondary-01': '#1E1E1E',
+                            'secondary-02': '#313134',
+                            'secondary-03': '#54545D',
+                            'secondary-04': '#7F7F7F',
+                            'secondary-05': '#9E9893',
+
+                            'success-01': '#064E3B',
+                            'success-02': '#047B57',
+                            'success-03': '#10B981',
+                            'success-04': '#6EE7B7',
+                            'success-05': '#ECFDF5',
+                            'success-05': '#ECFDF5',
+
+                            'error-01': '#7F1D1D',
+                            'error-02': '#B91C1C',
+                            'error-03': '#EF4444',
+                            'error-04': '#F68888',
+                            'error-05': '#FEF2F2',
+
+                            'white-01': '#FFFFFF',
+                            'white-02': '#F2F2F2',
+                            'white-03': '#CECBC9',
+
+                            navs: 'rgba(0, 0, 0, 0.2)',
+                            theme: '#40082B'
+                        },
+                        fontSize: {
+                            h1: '67px',
+                            h2: '51px',
+                            h3: '38px',
+                            h4: '28px',
+                            h5: '21px',
+                            normal: '16px',
+                            small: '14px',
+                            large: '18px',
+                            caption: '12px'
+                        },
+                        fontFamily: {
+                            worksans: ['Work Sans', 'sans-serif']
+                        }
+                    },
+                    screens: {
+                        xs: '480px',
+                        ss: '620px',    
+                        sm: '768px',
+                        md: '1024px',
+                        lg: '1440px',
+                        xl: '1700px'
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>  
+        <div class="w-full overflow-hidden font-worksans bg-navs">
+            <!-- <nav class="relative container mx-auto p-4 ">
+                <div class="flex items-center justify-between">
+                    <div class="w-1/3 sm:inline hidden ">
+                        <ul class="flex md:space-x-10">
+                            <li class="cursor-pointer font-regular text-large text-white-01 hover:text-primary-01 pr-2">About</li>
+                            <li class="cursor-pointer font-regular text-large text-white-01 hover:text-primary-01 px-2">Products</li>
+                            <li class="cursor-pointer font-regular text-large text-white-01 hover:text-primary-01 px-2">Events</li>
+                        </ul>
+                    </div>
+                    <img src="assets/logo.svg" class="w-[252.23px] h-[54px] flex-1" alt="" />
+                    <div class="w-1/3 sm:flex hidden justify-end items-center">
+                        <ul class="flex md:space-x-10">
+                            <li class="cursor-pointer font-regular text-large text-white-01 hover:text-primary-01 px-2">Shop</li>
+                            <li class="cursor-pointer font-regular text-large text-white-01 hover:text-primary-01 px-2">Contact</li>
+                        </ul>
+                        <div class="flex items-center pl-6">
+                             <div class="bg-primary-01 px-6 py-3 rounded">
+                                <h1 class="text-white-01 text-large font-regular">Button</h1>
+                            </div>
+                            <iconify-icon class="pl-6 text-primary-01" icon="system-uicons:cart" width="24" height="24" style="color: white;"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </nav> -->
+
+            <section id="hero" class="w-full h-full">
+                <div class="flex items-center h-screen justify-center">
+
+                    <div class="flex flex-col items-center">
+                        <img src="assets/background.jpg" class="obtain fixed top-0 left-0 right-0 z-[-1] object-fill " alt="">
+                        <div class="text-white-01 text-h1 font-bold">IQMK GLOBAL</div>
+                        <div class="text-white-01 text-h3 font-medium">A Global Movement of Health and Hope.</div>
+                        <div class="text-white-01 text-h5 font-medium">
+                            We provides value added wellness products to our customers and strives to empower its iPartners to achieve the lifestyle of their dreams.
+                        </div>
+                        <button class="bg-primary-02 px-6 py-3 rounded">
+                            <h1 class="text-white-01 text-large font-regular uppercase">watch video</h1>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- <div class="w-full overflow-hidden font-worksans">
+            <div class="bg-navs py-4">
+                <nav class="xl:mx-[200px] lg:mx-[165px] md:mx-[100px] mx-6 flex justify-between items-center">
+                    <ul class="flex justify-between">
+                        <li class="cursor-pointer px-6 font-regular text-large text-white-01">About</li>
+                        <div class="flex px-6">
+                            <li class="cursor-pointer px-2 font-regular text-large text-white-01">Products</li>
+                            <div class="px-3">
+                                <iconify-icon icon="system-uicons:chevron-down" style="color: white;" width="24" height="24"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="flex px-6">
+                            <li class="cursor-pointer px-2 font-regular text-large text-white-01">Events</li>
+                            <div class="px-3">
+                                <iconify-icon icon="system-uicons:chevron-down" style="color: white;" width="24" height="24"></iconify-icon>
+                            </div>
+                        </div>
+                    </ul>
+                    <img src="assets/logo.svg" class="w-[252.23px] h-[54px] flex-1" alt="" />
+                    <div class="flex justify-between items-center">
+                        <ul class="flex justify-between">
+                            <li class="cursor-pointer px-6 font-regular text-large text-white-01">Shop</li>
+                            <li class="cursor-pointer px-6 font-regular text-large text-white-01">Contact</li>
+                        </ul>
+                        <div class="bg-primary-01 px-6 py-3 rounded">
+                            <h1 class="text-white-01 text-large font-regular">Button</h1>
+                        </div>
+                        <iconify-icon class="pl-6" icon="system-uicons:cart" width="24" height="24" style="color: white;"></iconify-icon>
+                    </div>
+                </nav>
+            </div>
+            <div class=""></div>
+        </div> -->
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <!-- nav -->
+
+        <!-- hero -->
+        <!-- <div class="w-full font-worksans">
+            <div class="sm:px-16 px-6 flex justify-center items-center bg-navs">
+                <div class="xl:max-w-[1440px] w-full flex justify-center items-center ">
+                    <nav class="w-full py-6 justify-between items-center flex ">
+                        <ul class="list-none justify-start sm:flex hidden items-center">
+                            <li class="cursor-pointer px-6 font-regular text-large">About</li>
+                            <li class="cursor-pointer px-6 font-regular text-large">Products</li>
+                            <li class="cursor-pointer px-6 font-regular text-large">Events</li>
+                        </ul>
+                        <img
+                            src="assets/IQMK_Global_W_background__1_-removebg-preview 1.svg"
+                            class="w-[252.23px] h-[54px] justify-center"
+                            alt="" />
+                        <div class="flex justify-end">
+                            <ul class="list-none sm:flex hidden justify-between items-center">
+                                <li class="cursor-pointer px-6 font-regular text-large">Shop</li>
+                                <li class="cursor-pointer px-6 font-regular text-large">
+                                    Contacts
+                                </li>
+                            </ul>
+                            <div class="bg-primary-01 px-6 py-3 rounded">
+                                <h1 class="text-white-01 text-large font-regular">Button</h1>
+                            </div>
+                            
+                            <iconify-icon icon="system-uicons:cart" width="24" height="24" style="color: white;"></iconify-icon>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div> -->
+    </body>
+</html>

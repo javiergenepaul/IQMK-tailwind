@@ -8,6 +8,13 @@
         <!-- custom css -->
         <style type="text/tailwindcss">
             @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+            .clamp-2 {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
         </style>
 
         <!-- config -->
@@ -77,6 +84,9 @@
                         xl: '1700px' //desktop
                     }
                 }
+                // plugins: [
+                //     require('@tailwindcss/line-clamp'),
+                // ]
             }
         </script>
     </head>
@@ -145,7 +155,9 @@
                         <h2 class="text-white-01 font-bold text-h2 pt-32">About</h2>
                     </div>
                     <!-- mission -->
-                    <section id="about" class="flex md:flex-row flex-col gap-x-8 items-center md:py-8 py-3">
+                    <section
+                        id="about"
+                        class="flex md:flex-row flex-col gap-x-8 items-center md:py-8 py-3">
                         <div class="md:py-[109px] py-6 px-8 basis-2/3">
                             <h3 class="text-white-01 text-h3 font-bold">Mission</h3>
                             <h4 class="text-white-02 text-h4 font-medium pt-4">
@@ -163,19 +175,25 @@
                                 positive contributor to society at large.
                             </p>
                         </div>
-                        <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
+                        <div
+                            class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                             <img src="assets/image_01.png" class="" alt="image_01.png" />
                             <!-- <div class="w-full h-full bg-shade absolute top-0 left-0 rounded-full"></div> -->
-                            <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
+                            <div
+                                class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                         </div>
                     </section>
 
                     <!-- vision -->
-                    <section id="about" class="flex md:flex-row flex-col-reverse gap-x-8 items-center md:py-8 py-3">
-                         <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
+                    <section
+                        id="about"
+                        class="flex md:flex-row flex-col-reverse gap-x-8 items-center md:py-8 py-3">
+                        <div
+                            class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                             <img src="assets/image_01.png" class="" alt="image_01.png" />
                             <!-- <div class="w-full h-full bg-shade absolute top-0 left-0 rounded-full"></div> -->
-                            <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
+                            <div
+                                class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                         </div>
                         <div class="md:py-[109px] py-6 px-8 basis-2/3">
                             <h3 class="text-white-01 text-h3 font-bold">Mission</h3>
@@ -197,7 +215,9 @@
                     </section>
 
                     <!-- commitment -->
-                    <section id="about" class="flex md:flex-row flex-col gap-x-8 items-center md:py-8 py-3">
+                    <section
+                        id="about"
+                        class="flex md:flex-row flex-col gap-x-8 items-center md:py-8 py-3">
                         <div class="md:py-[109px] py-6 px-8 basis-2/3">
                             <h3 class="text-white-01 text-h3 font-bold">Mission</h3>
                             <h4 class="text-white-02 text-h4 font-medium pt-4">
@@ -215,19 +235,25 @@
                                 positive contributor to society at large.
                             </p>
                         </div>
-                        <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
+                        <div
+                            class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                             <img src="assets/image_01.png" class="" alt="image_01.png" />
                             <!-- <div class="w-full h-full bg-shade absolute top-0 left-0 rounded-full"></div> -->
-                            <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
+                            <div
+                                class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                         </div>
                     </section>
 
                     <!-- our Business model -->
-                    <section id="about" class="flex md:flex-row flex-col-reverse gap-x-8 items-center pb-32 md:pt-8 pt-3">
-                         <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
+                    <section
+                        id="about"
+                        class="flex md:flex-row flex-col-reverse gap-x-8 items-center pb-32 md:pt-8 pt-3">
+                        <div
+                            class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                             <img src="assets/image_01.png" class="" alt="image_01.png" />
                             <!-- <div class="w-full h-full bg-shade absolute top-0 left-0 rounded-full"></div> -->
-                            <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
+                            <div
+                                class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                         </div>
                         <div class="md:py-[109px] py-6 px-8 basis-2/3">
                             <h3 class="text-white-01 text-h3 font-bold">Mission</h3>
@@ -308,44 +334,59 @@
                     </section>
                     <section class="flex justify-center sm:py-16 py-6">
                         <div class="flex flex-col items-center w-full">
-                            <div class="grid gap-4 md:grid-cols-3 grid-cols-2 auto-rows-max gap-x-4 md:w-2/3 w-full">
-                                <div class="flex flex-col bg-theme rounded-t-lg rounded-b-[60px] drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
-                                    <img src="assets/image_06.png"  class="basis-3/4 overflow-hidden" alt="" />
-                                    <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4 rounded-b-lg ">
+                            <div
+                                class="grid gap-4 md:grid-cols-3 grid-cols-2 auto-rows-max gap-x-4 md:w-2/3 w-full">
+                                <div
+                                    class="flex flex-col bg-theme rounded-t-lg rounded-b-[60px] drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
+                                    <img
+                                        src="assets/image_06.png"
+                                        class="basis-3/4 overflow-hidden"
+                                        alt="" />
+                                    <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4 rounded-b-lg">
                                         <span class="text-large text-secondary-02 font-regular">
                                             MUSNATURAL
                                         </span>
-                                        <span class="text-normal text-secondary-03 font-regular h">
-                                            It all began on a trip to Advance, North Carolina...
-                                        </span>
+                                        <p class="text-normal w-full text-secondary-03 font-regular clamp-2">
+                                            MUSCADINE SEEDS AND SKINS is the flagship product of IQMK.
+                                        </p>
                                         <button class="text-medium text-primary-01 font-medium">
                                             Read more
                                         </button>
                                     </div>
                                 </div>
-                                <div class="flex flex-col bg-theme rounded-t-lg rounded-b-[60px] drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
-                                    <img src="assets/image_06.png"  class="basis-3/4 overflow-hidden" alt="" />
-                                    <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4 rounded-b-lg ">
+                                <div
+                                    class="flex flex-col bg-theme rounded-t-lg rounded-b-[60px] drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
+                                    <img
+                                        src="assets/image_06.png"
+                                        class="basis-3/4 overflow-hidden"
+                                        alt="" />
+                                    <div
+                                        class="flex flex-col items-start basis-1/4 bg-white-01 p-4 rounded-b-lg">
                                         <span class="text-large text-secondary-02 font-regular">
                                             MUSNATURAL
                                         </span>
-                                        <span class="text-normal text-secondary-03 font-regular h">
-                                            It all began on a trip to Advance, North Carolina...
-                                        </span>
+                                        <p class="text-normal w-full text-secondary-03 font-regular clamp-2">
+                                            It all began on a trip to Advance, North Carolina
+                                        </p>
                                         <button class="text-medium text-primary-01 font-medium">
                                             Read more
                                         </button>
                                     </div>
                                 </div>
-                                <div class="flex flex-col bg-theme rounded-t-lg rounded-b-[60px] drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
-                                    <img src="assets/image_06.png"  class="basis-3/4 overflow-hidden" alt="" />
-                                    <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4 rounded-b-lg ">
+                                <div
+                                    class="flex flex-col bg-theme rounded-t-lg rounded-b-[60px] drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
+                                    <img
+                                        src="assets/image_06.png"
+                                        class="basis-3/4 overflow-hidden"
+                                        alt="" />
+                                    <div
+                                        class="flex flex-col items-start basis-1/4 bg-white-01 p-4 rounded-b-lg">
                                         <span class="text-large text-secondary-02 font-regular">
                                             MUSNATURAL
                                         </span>
-                                        <span class="text-normal text-secondary-03 font-regular h">
-                                            It all began on a trip to Advance, North Carolina...
-                                        </span>
+                                        <p class="text-normal w-full text-secondary-03 font-regular clamp-2">
+                                            MUSCADINE SEEDS AND SKINS is the flagship product of IQMK.
+                                        </p>
                                         <button class="text-medium text-primary-01 font-medium">
                                             Read more
                                         </button>

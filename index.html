@@ -112,46 +112,55 @@
 
     <body>
         <div class="w-full overflow-hidden font-worksans items-center relative">
-            <section class="flex justify-center fixed z-10 top-0 item-center bg-navs-light w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+            <section
+                id="nav-bg"
+                class="flex justify-center fixed z-10 top-0 item-center bg-navs-light w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                 <div class="xl:max-w-[1280px] w-full">
                     <nav class="w-full flex py-2 justify-between items-center">
                         <img src="assets/logo.svg" class="w-[252.23px] h-[54px]" alt="logo.png" />
                         <div class="flex gap-4 items-center">
-                            <ul class="flex justify-between gap-4">
-                                <li class="cursor-pointer text-secondary-02 text-large font-regular px-3">
+                            <ul id="nav-list" class="flex justify-between gap-4">
+                                <li
+                                    class="cursor-pointer text-secondary-02 text-large font-regular px-3">
                                     Home
                                 </li>
-                                <li class="cursor-pointer text-secondary-01 text-secondary-02 text-large font-regular px-3">
+                                <li
+                                    class="cursor-pointer text-secondary-02 text-large font-regular px-3">
                                     About
                                 </li>
-                                <li class="cursor-pointer text-secondary-01 text-secondary-02 text-large font-regular px-3">
+                                <li
+                                    class="cursor-pointer text-secondary-02 text-large font-regular px-3">
                                     Products
                                 </li>
-                                <li class="cursor-pointer text-secondary-01 text-secondary-02 text-large font-regular px-3">
+                                <li
+                                    class="cursor-pointer text-secondary-02 text-large font-regular px-3">
                                     Opportunity
                                 </li>
                                 <li
-                                    class="cursor-pointer text-secondary-01 text-secondary-02 text-large font-regular px-3">
+                                    class="cursor-pointer text-secondary-02 text-large font-regular px-3">
                                     Event
                                 </li>
                                 <li
-                                    class="cursor-pointer text-secondary-01 text-secondary-02 text-large font-regular px-3">
+                                    class="cursor-pointer text-secondary-02 text-large font-regular px-3">
                                     Shop
                                 </li>
                                 <li
-                                    class="cursor-pointer text-secondary-01 text-secondary-02 text-large font-regular px-3">
+                                    class="cursor-pointer text-secondary-02 text-large font-regular px-3">
                                     Contact
                                 </li>
                             </ul>
-                            <div class="bg-primary-02 px-6 py-3 rounded hover:bg-primary-01">
+                            <div
+                                id="nav-btn"
+                                class="bg-primary-02 px-6 py-3 rounded hover:bg-primary-01">
                                 <button class="text-white-01 text-small font-regular">
                                     Sign Up
                                 </button>
                             </div>
                             <div class="p-2 flex items-center">
                                 <iconify-icon
+                                    id="nav-icon"
                                     icon="system-uicons:cart"
-                                    style="color: #000000"
+                                    style="color: #313134"
                                     width="24"
                                     height="24"></iconify-icon>
                             </div>
@@ -484,12 +493,35 @@
     <script>
         $(window).scroll(function (event) {
             var st = $(this).scrollTop()
-            if (st >= $('#about').position().top) {
-                console.log('about');
-            } else {
-                console.log('not about');
+            sections = ['hero', 'about', 'product'];
+            isLight = ['hero', 'about'];
+            function scroll(section_id) {
+                section = $('#' + section_id + '')
+                if (st < section.position().top + section.outerHeight(true) &&st >= section.position().top) {
+                    if (isLight.includes(section_id)) {
+                        $('#nav-bg').removeClass('bg-navs-dark');
+                        $('#nav-bg').addClass('bg-navs-light');
+                        $('#nav-list li').each(function(){
+                            $(this).removeClass('text-white-01');
+                            $(this).addClass('text-secondary-02');
+                        });
+                        $('#nav-icon').css('color', '#313134');
+                    } else {
+                        // TODO change navbar color to dark
+                        $('#nav-bg').removeClass('bg-navs-light');
+                        $('#nav-bg').addClass('bg-navs-dark');
+                        $('#nav-list li').each(function(){
+                            $(this).removeClass('text-secondary-02');
+                            $(this).addClass('text-white-01');
+                        });
+                        $('#nav-icon').css('color', '#FFFFFF');
+                    }
+                }
             }
+
+            sections.forEach(section => {
+                 scroll(section);
+            });
         });
-        
     </script>
 </html>

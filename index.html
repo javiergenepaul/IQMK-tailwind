@@ -33,6 +33,14 @@
                 box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
                 border-radius: 100px;
             }
+
+            .primary__gradient {                                              
+                background-image: radial-gradient(circle closest-side at 50% 50%, #7D0D52 0%,rgba(11, 0, 7, 0) 100%);
+                /* background-image: radial-gradient(circle closest-side at 50% 50%, blue, green, yellow, black); */
+                /* background-image: radial-gradient(circle closest-corner at 50% 50%, blue, green, yellow, black); */
+                /* background-image: radial-gradient(circle farthest-side at 50% 50%, blue, green, yellow, black); */
+                /* background: radial-gradient(red, green, rgba(119, 0, 255, 0)); */
+            }
         </style>
 
         <!-- config -->
@@ -119,7 +127,7 @@
                     <nav class="w-full flex py-2 justify-between items-center">
                         <img src="assets/logo.svg" class="w-[252.23px] h-[54px]" alt="logo.png" />
                         <div class="flex gap-4 items-center">
-                            <ul id="nav-list" class="flex justify-between gap-4">
+                            <ul id="nav-list" class="justify-between lg:gap-4 md:flex hidden">
                                 <li
                                     class="cursor-pointer text-secondary-02 text-large font-regular px-3">
                                     Home
@@ -168,8 +176,6 @@
                     </nav>
                 </div>
             </section>
-
-            <!-- hero starts -->
             <section
                 id="hero"
                 class="flex justify-center items-start bg-cover bg-no-repeat"
@@ -193,11 +199,12 @@
                     </div>
                 </div>
             </section>
-            <!-- hero ends -->
 
-            <!-- about start -->
-            <section id="about" class="bg-[#40082B] sm:px-16 px-6 flex justify-center items-start">
-                <div class="xl:max-w-[1280px] w-full">
+            <section 
+                id="about"  
+                class="bg-[#40082B] sm:px-16 px-6 flex justify-center items-start relative">
+                <div class="absolute top-0 left-0 w-full h-full primary__gradient"></div>
+                <div class="xl:max-w-[1280px] w-full relative ">
                     <!-- header -->
                     <div class="flex justify-center gap-x-11 md:pt-32 pt-6">
                         <div class="box-border w-full p-4 border-b-[1px]"></div>
@@ -237,9 +244,7 @@
                         </section>
 
                         <!-- vision -->
-                        <section
-                            id="about"
-                            class="flex md:flex-row flex-col-reverse gap-x-8 items-center md:py-8 py-3">
+                        <section id="about"  class=" flex md:flex-row flex-col-reverse gap-x-8 items-center md:py-8 py-3">
                             <div
                                 class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="" alt="image_01.png" />
@@ -331,9 +336,7 @@
                     </div>
                 </div>
             </section>
-            <!-- about ends -->
 
-            <!-- products starts -->
             <section
                 id="product"
                 class="bg-primary-09 sm:px-16 px-6 flex justify-center items-start pt-20">
@@ -488,7 +491,8 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
+        referrerpolicy="no-referrer">
+    </script>
 
     <script>
         $(window).scroll(function (event) {

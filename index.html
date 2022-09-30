@@ -90,6 +90,7 @@
                             shade: 'rgba(49, 49, 53, 0.46)'
                         },
                         fontSize: {
+                            // web font
                             h1: '67px',
                             h2: '51px',
                             h3: '38px',
@@ -98,7 +99,14 @@
                             normal: '16px',
                             small: '14px',
                             large: '18px',
-                            caption: '12px'
+                            caption: '12px',
+
+                            // mobile font
+                            h1p: '32px',
+                            h2p: '29px',
+                            h3p: '26px',
+                            h4p: '23px',
+                            h5p: '20px'
                         },
                         fontFamily: {
                             worksans: ['Work Sans', 'sans-serif']
@@ -116,9 +124,6 @@
                         xl: '1700px' //desktop
                     }
                 }
-                // plugins: [
-                //     require('@tailwindcss/line-clamp'),
-                // ]
             }
         </script>
     </head>
@@ -181,23 +186,24 @@
                     </nav>
                 </div>
             </section>
+
             <section
                 id="hero"
                 class="flex justify-center items-start bg-cover bg-no-repeat"
                 style="background-image: url('assets/background.jpg')">
                 <div class="xl:max-w-[1280px] w-full">
                     <div class="flex flex-col items-center justify-center h-screen">
-                        <h1 class="text-white-01 text-h1 font-bold">IQMK GLOBAL</h1>
-                        <h3 class="text-white-01 text-h3 font-medium">
+                        <h1 class="text-white-01 md:text-h1 text-h1p font-bold">IQMK GLOBAL</h1>
+                        <h3 class="text-white-01 md:text-h3 text-h3p font-medium text-center">
                             A Global Movement of Health and Hope.
                         </h3>
-                        <p class="text-white-01 text-h5 font-medium text-center">
+                        <p class="text-white-01 md:text-h5 text-[18px] font-medium text-center">
                             We provides value added wellness products to our customers and strives
                             to empower its iPartners to achieve the lifestyle of their dreams.
                         </p>
-                        <button class="bg-white-02 px-6 py-3 rounded mt-16">
+                        <button class="bg-white-02 px-6 py-3 rounded md:mt-14 mt-5">
                             <h1
-                                class="text-secondary-01 text-large font-regular uppercase drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
+                                class="text-secondary-01 md:text-large text-[15px] font-regular uppercase drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
                                 watch video
                             </h1>
                         </button>
@@ -208,20 +214,18 @@
             <section
                 id="about"
                 class="bg-[#40082B] h-full sm:px-16 px-6 flex justify-center items-start relative">
-                <!-- TODO:: sample -->
-                <div class="absolute top-20% left-auto w-[30%] h-[60%] rounded-full primary__gradient"></div>
-
+                <div
+                    class="absolute top-20% left-auto w-[30%] h-[60%] rounded-full primary__gradient"></div>
                 <div class="xl:max-w-[1280px] w-full relative">
                     <!-- header -->
-                    <div class="flex justify-center gap-x-11 md:pt-32 pt-6">
+                    <div class="flex justify-center gap-x-11 md:pt-32 pt-10">
                         <div class="box-border w-full p-4 border-b-[1px]"></div>
                         <h2 class="text-white-01 font-bold text-h2">About</h2>
                         <div class="box-border w-full p-4 border-b-[1px]"></div>
                     </div>
-                    <!-- mission -->
-                    <div class="md:py-[189px] py-7">
+                    <div class="md:py-[189px] pt-7 pb-10">
+                        <!-- mission -->
                         <section
-                            id="about"
                             class="flex md:flex-row flex-col gap-x-8 items-center md:py-8 py-3">
                             <div class="md:py-[109px] py-6 px-8 basis-2/3">
                                 <h3 class="text-white-01 text-h3 font-bold">Mission</h3>
@@ -244,7 +248,6 @@
                             <div
                                 class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="" alt="image_01.png" />
-                                <!-- <div class="w-full h-full bg-shade absolute top-0 left-0 rounded-full"></div> -->
                                 <div
                                     class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
@@ -252,61 +255,53 @@
 
                         <!-- vision -->
                         <section
-                            id="about"
                             class="flex md:flex-row flex-col-reverse gap-x-8 items-center md:py-8 py-3">
                             <div
                                 class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="" alt="image_01.png" />
-                                <!-- <div class="w-full h-full bg-shade absolute top-0 left-0 rounded-full"></div> -->
                                 <div
                                     class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
                             <div class="md:py-[109px] py-6 px-8 basis-2/3">
-                                <h3 class="text-white-01 text-h3 font-bold">Mission</h3>
+                                <h3 class="text-white-01 text-h3 font-bold">Vision</h3>
                                 <h4 class="text-white-02 text-h4 font-medium pt-4">
-                                    Welcome to IQMK Global
+                                    The IQMK Global vision
                                 </h4>
                                 <p class="text-white-03 text-normal pt-2">
-                                    Our aim is to provide all our partners the opportunity to
-                                    fulfill their potential of living a life they love. This is
-                                    achieved by offering a combination of transformative wellness
-                                    products and profitable business opportunities. We believe that
-                                    each person is unique and gifted and deserving of every
-                                    opportunity to succeed to the fullest extent. We believe that by
-                                    helping people help others and by providing the right tools,
-                                    people will seize the opportunity available to them and achieve
-                                    their personal goals while being a positive contributor to
-                                    society at large.
+                                    IQMK Global Is Passionate about improving the quality of
+                                    people’s lives. We deliver the best quality muscadine grapeseed
+                                    and skin antioxidant supplements that deliver a plethora of
+                                    health benefits through just one premium, all-natural food
+                                    source.
                                 </p>
+                                <button
+                                    class="bg-white-02 py-2 px-28 my-4 text-h5 text-primary-02 font-regular w-full md:w-auto">
+                                    READ MORE
+                                </button>
                             </div>
                         </section>
 
                         <!-- commitment -->
                         <section
-                            id="about"
                             class="flex md:flex-row flex-col gap-x-8 items-center md:py-8 py-3">
                             <div class="md:py-[109px] py-6 px-8 basis-2/3">
-                                <h3 class="text-white-01 text-h3 font-bold">Mission</h3>
-                                <h4 class="text-white-02 text-h4 font-medium pt-4">
-                                    Welcome to IQMK Global
-                                </h4>
-                                <p class="text-white-03 text-normal pt-2">
+                                <h3 class="text-white-01 text-h3 font-bold">Commitment</h3>
+                                <p class="text-white-03 text-normal pt-4">
                                     Our aim is to provide all our partners the opportunity to
                                     fulfill their potential of living a life they love. This is
                                     achieved by offering a combination of transformative wellness
                                     products and profitable business opportunities. We believe that
                                     each person is unique and gifted and deserving of every
                                     opportunity to succeed to the fullest extent. We believe that by
-                                    helping people help others and by providing the right tools,
-                                    people will seize the opportunity available to them and achieve
-                                    their personal goals while being a positive contributor to
-                                    society at large.
                                 </p>
+                                <button
+                                    class="bg-white-02 py-2 px-28 my-4 text-h5 text-primary-02 font-regular w-full md:w-auto">
+                                    READ MORE
+                                </button>
                             </div>
                             <div
                                 class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="" alt="image_01.png" />
-                                <!-- <div class="w-full h-full bg-shade absolute top-0 left-0 rounded-full"></div> -->
                                 <div
                                     class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
@@ -314,32 +309,26 @@
 
                         <!-- our Business model -->
                         <section
-                            id="about"
                             class="flex md:flex-row flex-col-reverse gap-x-8 items-center md:pt-8 pt-3">
                             <div
                                 class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="" alt="image_01.png" />
-                                <!-- <div class="w-full h-full bg-shade absolute top-0 left-0 rounded-full"></div> -->
                                 <div
                                     class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
                             <div class="md:py-[109px] py-6 px-8 basis-2/3">
-                                <h3 class="text-white-01 text-h3 font-bold">Mission</h3>
-                                <h4 class="text-white-02 text-h4 font-medium pt-4">
-                                    Welcome to IQMK Global
-                                </h4>
-                                <p class="text-white-03 text-normal pt-2">
-                                    Our aim is to provide all our partners the opportunity to
-                                    fulfill their potential of living a life they love. This is
-                                    achieved by offering a combination of transformative wellness
-                                    products and profitable business opportunities. We believe that
-                                    each person is unique and gifted and deserving of every
-                                    opportunity to succeed to the fullest extent. We believe that by
-                                    helping people help others and by providing the right tools,
-                                    people will seize the opportunity available to them and achieve
-                                    their personal goals while being a positive contributor to
-                                    society at large.
+                                <h3 class="text-white-01 text-h3 font-bold">Our Business Model</h3>
+                                <p class="text-white-03 text-normal pt-4">
+                                    IQMK Global Is Passionate about improving the quality of
+                                    people’s lives. We deliver the best quality muscadine grapeseed
+                                    and skin antioxidant supplements that deliver a plethora of
+                                    health benefits through just one premium, all-natural food
+                                    source.
                                 </p>
+                                <button
+                                    class="bg-white-02 py-2 px-28 my-4 text-h5 text-primary-02 font-regular w-full md:w-auto">
+                                    READ MORE
+                                </button>
                             </div>
                         </section>
                     </div>
@@ -357,11 +346,17 @@
                         <div
                             class="box-border w-full p-4 border-b-[1px] border-black flex-1 md:block hidden"></div>
                     </div>
+
                     <section class="flex sm:py-16 py-6">
                         <div
-                            class="bg-theme flex md:flex-row flex-col w-full justify-between rounded-[8px] overflow-hidden">
+                            class="bg-theme flex md:flex-row flex-col w-full justify-between rounded-lg relative">
+                            <!-- TODO::  -->
                             <div
-                                class="basis-1/2 object-cover h-[851px] relative"
+                                class="absolute -left-3 -top-3 w-full h-full border border-secondary-04 z-10 rounded-lg"></div>
+                            <div
+                                class="absolute left-3 top-3 w-full h-full border border-secondary-04 z-50 rounded-lg"></div>
+                            <div
+                                class="basis-1/2 object-cover h-[851px] relative rounded-l-lg overflow-hidden"
                                 style="background-image: url('assets/image_05.png')">
                                 <div class="w-full h-full bg-shade">
                                     <div
@@ -521,8 +516,12 @@
                             $(this).addClass('text-secondary-02')
                         })
                         $('#nav-icon').css('color', '#313134')
+
+                        $('#nav-btn').removeClass('bg-white-01')
+                        $('#nav-btn').addClass('bg-primary-02')
+                        $('#nav-btn button').removeClass('text-secondary-01')
+                        $('#nav-btn button').addClass('text-white-01')
                     } else {
-                        // TODO change navbar color to dark
                         $('#nav-bg').removeClass('bg-navs-light')
                         $('#nav-bg').addClass('bg-navs-dark')
                         $('#nav-list li').each(function () {
@@ -530,6 +529,11 @@
                             $(this).addClass('text-white-01')
                         })
                         $('#nav-icon').css('color', '#FFFFFF')
+
+                        $('#nav-btn').removeClass('bg-primary-02')
+                        $('#nav-btn').addClass('bg-white-01')
+                        $('#nav-btn button').removeClass('text-white-01')
+                        $('#nav-btn button').addClass('text-secondary-01')
                     }
                 }
             }

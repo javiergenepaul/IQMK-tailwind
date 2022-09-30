@@ -132,7 +132,7 @@
         <div class="w-full overflow-hidden font-worksans items-center relative">
             <section
                 id="nav-bg"
-                class="flex justify-center fixed z-10 top-0 item-center bg-navs-light w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+                class="flex justify-center fixed z-50 top-0 item-center bg-navs-light w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                 <div class="xl:max-w-[1280px] w-full">
                     <nav class="w-full flex py-2 justify-between items-center">
                         <img src="assets/logo.svg" class="w-[252.23px] h-[54px]" alt="logo.png" />
@@ -213,7 +213,7 @@
 
             <section
                 id="about"
-                class="bg-[#40082B] h-full sm:px-16 px-6 flex justify-center items-start relative">
+                class="bg-theme h-full sm:px-16 px-6 flex justify-center items-start relative">
                 <div
                     class="absolute top-20% left-auto w-[30%] h-[60%] rounded-full primary__gradient"></div>
                 <div class="xl:max-w-[1280px] w-full relative">
@@ -347,16 +347,13 @@
                             class="box-border w-full p-4 border-b-[1px] border-black flex-1 md:block hidden"></div>
                     </div>
 
-                    <section class="flex sm:py-16 py-6">
+                    <div class="flex sm:py-16 py-6">
                         <div
                             class="bg-theme flex md:flex-row flex-col w-full justify-between rounded-lg relative">
                             <!-- TODO::  -->
-                            <div
-                                class="absolute -left-3 -top-3 w-full h-full border border-secondary-04 z-10 rounded-lg"></div>
-                            <div
-                                class="absolute left-3 top-3 w-full h-full border border-secondary-04 z-50 rounded-lg"></div>
-                            <div
-                                class="basis-1/2 object-cover h-[851px] relative rounded-l-lg overflow-hidden"
+                            <div class="absolute pointer-events-none -left-3 -top-3 w-full h-full border border-secondary-04 z-10 rounded-lg"></div>
+                            <div class="absolute pointer-events-none left-3 top-3 w-full h-full border border-secondary-04 z-10 rounded-lg"></div>
+                            <div class="basis-1/2 object-cover h-[851px] relative rounded-l-lg overflow-hidden"
                                 style="background-image: url('assets/image_05.png')">
                                 <div class="w-full h-full bg-shade">
                                     <div
@@ -386,8 +383,7 @@
                                         <h4 class="text-h4 font-medium text-white-01">
                                             Muscadine Grapes
                                         </h4>
-                                        <p
-                                            class="text-normal font-regular text-white-02 md:h-[200px] h-full scoll-product mt-7 md:overflow-y-scroll">
+                                        <p class="text-normal font-regular text-white-02 md:h-[200px] h-full scoll-product mt-7 md:overflow-y-scroll">
                                             Muscadine Grapes (Vitis rotundifolia), which are native
                                             to the Southeastern United States, have been dubbed “The
                                             Smarter Grape” because it contains 20-pairs of
@@ -409,9 +405,9 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
 
-                    <section class="flex justify-center sm:py-16 py-6">
+                    <div class="flex justify-center sm:py-16 py-6">
                         <div class="flex flex-col items-center w-full">
                             <div
                                 class="grid gap-4 md:grid-cols-3 grid-cols-2 auto-rows-max gap-x-4 md:w-2/3 w-full">
@@ -485,7 +481,21 @@
                                 cure or prevent any disease.
                             </p>
                         </div>
-                    </section>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="opportunity" class="bg-theme flex justify-center items-start sm:px-16 px-6 py-20">
+                <div class="xl:max-w-[1280px] w-full">
+                    <h1 class="text-h2 text-white-02 font-bold">Opportunity</h1>
+
+                    <div class="w-full h-[1080px] object-cover" style="background-image: url('assets/image_09.png')">
+                        <h2 class="text-h2 text-white-02 font-bold">
+                            Opportunity
+                        </h2>
+                    </div>
+                    <!-- <img src="assets/image_09.png" alt=""> -->
                 </div>
             </section>
         </div>

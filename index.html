@@ -130,7 +130,7 @@
                         focus:ring-primary-01
 
                         focus:invalid:border-error-02 
-                        focus:invalid:ring-error-02
+                        focus:invalid:ring-error-02;
                 }
             }
 
@@ -986,7 +986,10 @@
                                                         data-dropdown-toggle="dropdown-states"
                                                         class="flex-shrink-0 gap-2 inline-flex items-center py-2.5 w-full border border-white-03 rounded text-white-01 font-normal px-3"
                                                         type="button">
-                                                        <iconify-icon id="selected_btn_icon" class="text-white-01" icon="flagpack:ph"></iconify-icon>
+                                                        <iconify-icon
+                                                            id="selected_btn_icon"
+                                                            class="text-white-01"
+                                                            icon="flagpack:ph"></iconify-icon>
                                                         <div
                                                             id="selected_name"
                                                             class="truncate overflow-hidden">
@@ -1721,37 +1724,47 @@
                                 </h3>
                                 <form action="" class="py-10">
                                     <div class="mb-3 w-full relative">
-                                        <label
-                                            for="input_01"
-                                            class="form-label inline-block text-caption text-secondary-05">Name</label>
-                                        <div class="relative flex justify-end items-center">
-                                            <input
-                                                type="text"
-                                                class="form-control text-normal text-secondary-03 bg-primary-08 font-regular px-3 py-2.5 w-full input-primary"
+                                        <label for="input_01" class="form-label inline-block text-caption text-secondary-05">Name</label>
+                                        <div class="relative">
+                                            <input type="text"
+                                                class="peer form-control text-normal text-secondary-03 font-regular px-3 py-2.5 w-full bg-primary-08 input-primary"
                                                 id="input_01"
                                                 placeholder="Enter your name" />
-                                                <iconify-icon icon="system-uicons:user-male" class="absolute pr-4 text-white-03" width="24" height="24"></iconify-icon>
+                                            <iconify-icon icon="system-uicons:user-male" class="absolute right-3 inset-y-[10px] text-white-03" width="24" height="24"></iconify-icon>
+                                            <p class="mt-2 text-small text-error-02 hidden peer-invalid:block">
+                                                <span class="font-medium">Oh, snapp!</span> Some error message.
+                                            </p>
                                         </div>
                                     </div>
+
                                     <div class="mb-3 w-full relative">
-                                        <label
-                                            for="input_01"
-                                            class="form-label inline-block text-caption text-secondary-05">Email</label>
-                                        <div class="relative items-center">
+                                        <label for="input_01" class="form-label inline-block text-caption text-secondary-05">Email</label>
+                                        <div class="relative">
                                             <input type="email"
                                                 class="peer form-control text-normal text-secondary-03 font-regular px-3 py-2.5 w-full bg-primary-08 input-primary"
                                                 id="input_01"
                                                 placeholder="Enter your active email" />
-                                            <iconify-icon icon="system-uicons:mail" class="absolute right-3 top-2 text-white-03" width="24" height="24"></iconify-icon>
-                                            <p class="mt-2 text-small text-error-02 hidden peer-invalid:block"><span class="font-medium">Oh, snapp!</span> Some error message.</p>
+                                            <iconify-icon icon="system-uicons:mail" class="absolute right-3 inset-y-[10px] text-white-03" width="24" height="24"></iconify-icon>
+                                            <p class="mt-2 text-small text-error-02 hidden peer-invalid:block">
+                                                <span class="font-medium">Oh, snapp!</span> Some error
+                                                message.
+                                            </p>
                                         </div>
                                     </div>
+
+
                                     <div class="mb-3 w-full relative">
-                                        <label for="input_01" class="form-label inline-block text-caption text-secondary-05">Message</label>
-                                        <textarea rows="4" type="email"
-                                                class="peer form-control text-normal text-secondary-03 font-regular px-3 py-2.5 w-full bg-primary-08 input-primary"
-                                                id="input_01"
-                                                placeholder="Enter your active email"></textarea>
+                                        <label
+                                            for="input_01"
+                                            class="form-label inline-block text-caption text-secondary-05"
+                                            >Message</label
+                                        >
+                                        <textarea
+                                            rows="4"
+                                            type="email"
+                                            class="peer form-control text-normal text-secondary-03 font-regular px-3 py-2.5 w-full bg-primary-08 input-primary"
+                                            id="input_01"
+                                            placeholder="Enter your active email"></textarea>
                                     </div>
                                 </form>
                             </div>

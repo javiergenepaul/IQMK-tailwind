@@ -112,6 +112,43 @@
                 .input-transparent {
                     @apply w-full px-3 py-2.5 font-normal bg-transparent text-white-01 bg-clip-padding border border-white-03 rounded transition ease-in-out m-0 focus:text-white-01 focus:bg-[#FEF6FA]/[.15] focus:outline-none;
                 }
+
+                .input-primary {
+                    @apply border rounded border-white-03 
+
+                        invalid:border-error-02 
+                        invalid:text-error-02
+
+                        disabled:bg-slate-50 
+                        disabled:text-slate-500 
+                        disabled:border-slate-200 
+                        disabled:shadow-none
+
+                        focus:outline-none 
+                        focus:border-primary-01 
+                        focus:ring-1
+                        focus:ring-primary-01
+
+                        focus:invalid:border-error-02 
+                        focus:invalid:ring-error-02
+
+                        /* focus:outline-none 
+                        focus:border-sky-500 
+                        focus:ring-1 
+                        focus:ring-sky-500 */
+                        /* focus:ring-blue-500 
+                        focus:border-blue-500 
+                        dark:bg-gray-700 
+                        dark:border-gray-600 
+                        dark:placeholder-gray-400 
+                        dark:text-white 
+                        dark:focus:ring-blue-500 
+                        dark:focus:border-blue-500 */
+                }
+
+                .input-warning {
+                    @apply border rounded border-error-02 text-error-02 placeholder-error-02
+                }
             }
 
             .clamp-2 {
@@ -161,7 +198,8 @@
 
     <body>
         <div class="w-full overflow-hidden font-worksans items-center relative">
-            <nav id="nav-bg"
+            <nav
+                id="nav-bg"
                 class="flex justify-center fixed z-50 top-0 item-center bg-navs-light w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                 <div class="xl:max-w-[1280px] w-full">
                     <nav class="w-full flex py-2 justify-between items-center">
@@ -217,7 +255,8 @@
                 </div>
             </nav>
 
-            <section id="hero"
+            <section
+                id="hero"
                 class="flex justify-center items-start bg-cover bg-no-repeat"
                 style="background-image: url('assets/background.jpg')">
                 <div class="xl:max-w-[1280px] w-full">
@@ -240,9 +279,11 @@
                 </div>
             </section>
 
-            <section id="about"
+            <section
+                id="about"
                 class="bg-theme h-full sm:px-16 px-6 flex justify-center items-start relative">
-                <div  class="absolute top-20% left-auto w-[50%] h-[80%] rounded-full primary__gradient"></div>
+                <div
+                    class="absolute top-20% left-auto w-[50%] h-[80%] rounded-full primary__gradient"></div>
                 <div class="xl:max-w-[1280px] w-full relative">
                     <!-- header -->
                     <div class="flex justify-center gap-x-11 md:pt-32 pt-10">
@@ -360,7 +401,8 @@
                 </div>
             </section>
 
-            <section id="product"
+            <section
+                id="product"
                 class="bg-primary-09 sm:px-16 px-6 flex justify-center items-start pt-20">
                 <div class="xl:max-w-[1280px] w-full">
                     <div class="flex">
@@ -510,7 +552,8 @@
                 </div>
             </section>
 
-            <section id="opportunity"
+            <section
+                id="opportunity"
                 class="bg-theme flex justify-center items-start sm:px-16 px-6 py-20">
                 <div class="xl:max-w-[1280px] w-full">
                     <h1 class="text-h2 text-white-02 font-bold">Opportunity</h1>
@@ -1042,7 +1085,8 @@
                 </div>
             </section>
 
-            <section id="event"
+            <section
+                id="event"
                 class="bg-primary-07 flex justify-center items-start sm:px-16 px-6 py-20">
                 <div class="xl:max-w-[1280px] w-full">
                     <h1 class="text-h2 text-secondary-02 font-bold h-full">Event</h1>
@@ -1539,13 +1583,16 @@
                 </div>
             </section>
 
-            <section id="testimonial"
+            <section
+                id="testimonial"
                 class="bg-theme flex justify-center sm:px-16 px-6 py-20 relative">
-                <div  class="absolute top-30% left-auto w-[30%] h-[60%] rounded-full primary__gradient"></div>
+                <div
+                    class="absolute top-30% left-auto w-[30%] h-[60%] rounded-full primary__gradient"></div>
                 <div class="xl:max-w-[1280px] w-full">
                     <h1 class="text-h2 text-white-01 font-bold">Testimonials</h1>
                     <div class="flex w-full justify-center py-16">
-                        <div class="w-4/5 bg-primary-07 rounded outline outline-offset-[10px] outline-1 outline-white-01">
+                        <div
+                            class="w-4/5 bg-primary-07 rounded outline outline-offset-[10px] outline-1 outline-white-01">
                             <div id="animation-carousel" class="relative" data-carousel="static">
                                 <!-- Carousel wrapper -->
                                 <div class="relative overflow-hidden rounded-lg h-[600px]">
@@ -1553,13 +1600,12 @@
                                     <div
                                         class="hidden duration-200 ease-linear"
                                         data-carousel-item="active">
-                                        <div
-                                            class="flex justify-center h-full py-16 px-28 gap-4">
-                                            <div
-                                                class="w-3/5 flex items-center">
+                                        <div class="flex justify-center h-full py-16 px-28 gap-4">
+                                            <div class="w-3/5 flex items-center">
                                                 <div class="flex gap-4 items-start">
-                                                    <img src="assets/avatar_02.png"
-                                                        class="object-contain basis-2/12 "
+                                                    <img
+                                                        src="assets/avatar_02.png"
+                                                        class="object-contain basis-2/12"
                                                         alt="" />
                                                     <div class="flex-col basis-10/12">
                                                         <div class="flex items-center gap-2">
@@ -1640,16 +1686,24 @@
                                     type="button"
                                     class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                                     data-carousel-prev>
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                            <iconify-icon icon="system-uicons:chevron-left" width="24" height="24"></iconify-icon>
+                                    <span
+                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <iconify-icon
+                                            icon="system-uicons:chevron-left"
+                                            width="24"
+                                            height="24"></iconify-icon>
                                     </span>
                                 </button>
                                 <button
                                     type="button"
                                     class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                                     data-carousel-next>
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                        <iconify-icon icon="system-uicons:chevron-right" width="24" height="24"></iconify-icon>
+                                    <span
+                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                        <iconify-icon
+                                            icon="system-uicons:chevron-right"
+                                            width="24"
+                                            height="24"></iconify-icon>
                                     </span>
                                 </button>
                             </div>
@@ -1658,17 +1712,64 @@
                 </div>
             </section>
 
-            <section id="contact"
-                class="bg-primary-08 flex justify-center sm:px-16 px-6 py-20">
+            <section id="contact" class="bg-primary-08 flex justify-center sm:px-16 px-6 py-20">
                 <div class="xl:max-w-[1280px] w-full">
                     <h1 class="text-h2 text-secondary-01 font-bold">Contact</h1>
-                    <div class="flex gap-6">
+                    <div class="flex md:flex-row flex-col gap-10 py-16 items-center">
                         <div class="basis-1/2 rounded relative">
-                            <img src="assets/map.png" alt="">
-                            <div class="absolute pointer-events-none left-4 top-4 w-full h-full border border-secondary-04 z-10 rounded"></div>
-                            <div class="absolute pointer-events-none -left-4 -top-4 w-full h-full border border-secondary-04 z-20 rounded"></div>
+                            <img
+                                src="assets/map.png"
+                                class="drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]"
+                                alt="" />
+                            <div
+                                class="absolute pointer-events-none left-4 top-4 w-full h-full border border-secondary-04 z-10 rounded"></div>
+                            <div
+                                class="absolute pointer-events-none -left-4 -top-4 w-full h-full border border-secondary-04 z-20 rounded"></div>
                         </div>
-                        <div class="basis-1/2">sample</div>
+                        <div class="basis-1/2 flex justify-center">
+                            <div class="flex flex-col px-10">
+                                <h3 class="text-h3 text-secondary-03 font-medium">
+                                    We would be happy to answer your questions
+                                </h3>
+                                <form action="" class="py-10">
+                                    <div class="mb-3 w-full relative">
+                                        <label
+                                            for="input_01"
+                                            class="form-label inline-block text-caption text-secondary-05">Name</label>
+                                        <div class="relative flex justify-end items-center">
+                                            <input
+                                                type="text"
+                                                class="form-control text-normal text-secondary-03 bg-primary-08 font-regular px-3 py-2.5 w-full input-primary"
+                                                id="input_01"
+                                                placeholder="Enter your name" />
+                                                <iconify-icon icon="system-uicons:user-male" class="absolute pr-4 text-white-03" width="24" height="24"></iconify-icon>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 w-full relative">
+                                        <label
+                                            for="input_01"
+                                            class="form-label inline-block text-caption text-secondary-05">Email</label>
+                                        <div class="relative items-center">
+                                            <input type="email"
+                                                class="peer form-control text-normal text-secondary-03 font-regular px-3 py-2.5 w-full bg-primary-08 input-primary"
+                                                id="input_01"
+                                                placeholder="Enter your active email" />
+                                            <iconify-icon icon="system-uicons:mail" class="absolute right-3 top-2 text-white-03" width="24" height="24"></iconify-icon>
+                                            <p class="mt-2 text-small text-error-02 invisible peer-invalid:visible"><span class="font-medium">Oh, snapp!</span> Some error message.</p>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- <form>
+                                    <label class="block">
+                                        <span class="block text-sm font-medium text-slate-700">Email</span>
+                                        <input type="email" class="peer ..."/>
+                                        <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                                        Please provide a valid email address.
+                                        </p>
+                                    </label>
+                                </form> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

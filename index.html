@@ -11,6 +11,7 @@
         <!-- config -->
         <script>
             tailwind.config = {
+                // darkMode: 'class',
                 theme: {
                     extend: {
                         colors: {
@@ -54,27 +55,27 @@
                         },
                         fontSize: {
                             // web font
-                            h1: '67px',
-                            h2: '51px',
-                            h3: '38px',
-                            h4: '28px',
-                            h5: '21px',
-                            normal: '16px',
-                            small: '14px',
-                            large: '18px',
-                            caption: '12px',
+                            'h1': '67px',
+                            'h2': '51px',
+                            'h3': '38px',
+                            'h4': '28px',
+                            'h5': '21px',
+                            'normal': '16px',
+                            'small': '14px',
+                            'large': '18px',
+                            'caption': '12px',
 
                             // mobile font
-                            h2p: '32px',
-                            h3p: '29px',
-                            h4p: '26px',
-                            h5p: '23px',
-                            h6p: '20px',
-                            subtitle1: '18px',
-                            body: '16px',
-                            bodysm: '14px',
-                            buttonp: '15px',
-                            caption: '12px' 
+                            'h2-p': '32px',
+                            'h3-p': '29px',
+                            'h4-p': '26px',
+                            'h5-p': '23px',
+                            'h6-p': '20px',
+                            'subtitle-1': '18px',
+                            'body-p': '16px',
+                            'body-sm': '14px',
+                            'button-p': '15px',
+                            'caption-p': '12px' 
                         },
                         fontFamily: {
                             worksans: ['Work Sans', 'sans-serif']
@@ -212,11 +213,10 @@
             }
         </style>
     </head>
-
     <body>
         <div class="w-full overflow-hidden font-worksans items-center relative">
             <!-- TODO:: navbar mobile responsive -->
-            <nav id="nav-bg" class="flex justify-center fixed z-50 top-0 item-center bg-navs-light w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+            <nav id="nav-bg" class="flex justify-center fixed z-50 top-0 item-center bg-navs-light dark:bg-navs-dark w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                 <div class="xl:max-w-[1280px] w-full">
                     <nav class="w-full flex py-2 justify-between items-center">
                         <img src="assets/logo.svg" class="w-[252.23px] h-[54px]" alt="logo.png" />
@@ -251,13 +251,6 @@
                                     Contact
                                 </li>
                             </ul>
-                            <!-- <div
-                                id="nav-btn"
-                                class="bg-primary-02 px-6 py-3 rounded-full hover:bg-primary-01">
-                                <button class="text-white-01 text-small font-regular">
-                                    Sign Up
-                                </button>
-                            </div> -->
                             <button class="px-6 py-3 btn-primary">Sign up</button>
                             <div class="p-2 flex items-center">
                                 <iconify-icon
@@ -277,15 +270,15 @@
                 style="background-image: url('assets/background.jpg')">
                 <div class="xl:max-w-[1280px] w-full">
                     <div class="flex flex-col items-center justify-center h-screen gap-4">
-                        <h1 class="text-white-01 sm:text-h1 text-h2p font-bold sm:self-center self-start">IQMK GLOBAL</h1>
-                        <h3 class="text-white-01 sm:text-h3 text-h6p font-medium sm:text-center text-start">
+                        <h1 class="sm:font-bold sm:self-center text-white-01 sm:text-h1 text-h2-p font-semibold self-start">IQMK GLOBAL</h1>
+                        <h3 class="sm:text-h3 sm:font-medium sm:text-center text-white-01 text-h6-p text-start font-semibold">
                             A Global Movement of Health and Hope.
                         </h3>
-                        <p class="text-white-01 sm:text-h5 text-bodyp font-medium sm:text-center text-start">
+                        <p class="text-white-01 sm:text-h5 sm:font-medium text-bodyp sm:text-center text-start">
                             We provides value added wellness products to our customers and strives
                             to empower its iPartners to achieve the lifestyle of their dreams.
                         </p>
-                        <button class="bg-white-02 px-14 py-2.5 rounded-full md:mt-14 mt-5  drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] sm:w-auto w-full">
+                        <button class="md:mt-14 sm:w-auto w-full mt-5 bg-white-02 px-14 py-2.5 rounded-full  drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] ">
                             <h1 class="text-secondary-02 md:text-large text-[15px] font-regular uppercase">watch video</h1>
                         </button>
                     </div>
@@ -295,12 +288,12 @@
             <!-- about -->
             <section id="about" class="bg-theme h-full sm:px-16 md:px6 px-4 flex justify-center items-start relative">
                 <div class="absolute top-15% left-auto w-[30%] h-[80%] rounded-full primary__gradient"></div>
-                <div class="xl:max-w-[1280px] w-full relative md:py-32 sm:py-20  py-11">
+                <div class="xl:max-w-[1280px] md:py-32 sm:py-20 py-11 w-full relative">
                     <!-- header -->
                     <div class="flex justify-center gap-x-11 text-center">
-                        <div class="box-border w-full p-4 border-b-[1px] lg:block hidden"></div>
-                        <h2 class="text-white-01 font-bold sm:text-h2 text-h3p md:border-none border-y md:w-auto w-full">About</h2>
-                        <div class="box-border w-full p-4 border-b-[1px] lg:block hidden"></div>
+                        <div class="lg:block w-full p-4 border-b-[1px] hidden"></div>
+                        <h2 class="md:w-auto md:border-none sm:text-h2 w-full text-white-01 font-bold text-h3-p border-y">About</h2>
+                        <div class="lg:block w-full p-4 border-b-[1px] hidden"></div>
                     </div>
                     <div class="flex flex-col gap-28 pt-20">
                         <!-- mission -->
@@ -310,11 +303,11 @@
                                 <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
                             <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
-                                <h3 class="text-white-01 sm:text-h3 text-h4p font-bold">Mission</h3>
+                                <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Mission</h3>
                                 <h4 class="text-white-02 sm:text-h4 text-subtitle1 font-medium pt-4">
                                     Welcome to IQMK Global
                                 </h4>
-                                <p class="text-white-03 sm:text-normal text-bodyp pt-2">
+                                <p class="text-white-03 sm:text-normal text-body-p pt-2">
                                     Our aim is to provide all our partners the opportunity to
                                     fulfill their potential of living a life they love. This is
                                     achieved by offering a combination of transformative wellness
@@ -333,7 +326,7 @@
                         <!-- vision -->
                         <div class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
                             <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
-                                <h3 class="text-white-01 sm:text-h3 text-hp4 font-bold">Vision</h3>
+                                <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Vision</h3>
                                 <h4 class="text-white-02 sm:text-h4 text-subtitle1 font-medium pt-4">
                                     The IQMK Global vision
                                 </h4>
@@ -363,8 +356,8 @@
                                     class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
                             <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
-                                <h3 class="text-white-01 text-h3 font-bold">Commitment</h3>
-                                <p class="text-white-03 text-normal pt-4">
+                                <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Commitment</h3>
+                                <p class="text-white-03 sm:text-normal text-bodyp pt-2">
                                     Our aim is to provide all our partners the opportunity to
                                     fulfill their potential of living a life they love. This is
                                     achieved by offering a combination of transformative wellness
@@ -382,8 +375,8 @@
                         <div class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
 
                             <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
-                                <h3 class="text-white-01 text-h3 font-bold">Our Business Model</h3>
-                                <p class="text-white-03 text-normal pt-4">
+                                <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Our Business Model</h3>
+                                <p class="text-white-03 sm:text-normal text-bodyp pt-2">
                                     IQMK Global Is Passionate about improving the quality of
                                     people’s lives. We deliver the best quality muscadine grapeseed
                                     and skin antioxidant supplements that deliver a plethora of

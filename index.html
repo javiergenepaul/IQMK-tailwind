@@ -11,7 +11,7 @@
         <!-- config -->
         <script>
             tailwind.config = {
-                // darkMode: 'class',
+                darkMode: 'class',
                 theme: {
                     extend: {
                         colors: {
@@ -173,6 +173,13 @@
                 overflow: hidden;
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .clamp-4 {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;
             }
 
@@ -396,11 +403,10 @@
                     </div>
                 </div>
             </section>
-            
-            <!-- TODO:: responsive start here -->
+        
             <!-- product -->
-            <section id="product" class="bg-primary-09 md:px-16 sm:px-6 px-4 flex justify-center items-start pt-20">
-                <div class="xl:max-w-[1280px] w-full">
+            <section id="product" class="bg-primary-09 md:px-16 sm:px-6 px-4 flex justify-center items-start">
+                <div class="xl:max-w-[1280px] w-full py-14">
                     <div class="flex">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-secondary-01 flex-1 sm:text-start text-center md:border-none border-b">
                             Products You Can Trust
@@ -408,10 +414,10 @@
                         <div class="box-border w-full p-4 border-b-[1px] border-white-03 flex-1 md:block hidden"></div>
                     </div>
 
-                    <div class="flex sm:py-16 py-4">
+                    <!-- grapes -->
+                    <div class="flex py-16">
                         <div class="bg-theme flex md:flex-row flex-col w-full justify-between rounded-lg relative">
 
-                            <!-- web view start -->
                             <div class="absolute pointer-events-none -left-4 -top-4 w-full h-full border border-secondary-04 z-10 rounded-lg md:block hidden"></div>
                             <div class="absolute pointer-events-none left-4 top-4 w-full h-full border border-secondary-04 z-10 rounded-lg md:block hidden"></div>
                             <div class="basis-1/2 object-cover h-[851px] relative rounded-t-lg overflow-hidden md:block hidden"
@@ -432,23 +438,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- web view end -->
-
-                            <!-- mobile view start -->
                             <img src="assets/image_05.png" class="rounded-t-lg h-[340px] object-cover md:hidden block" alt="">
-                            <div class="flex basis-1/2 flex-col justify-center md:py-12 py-2 md:px-6 px-2 w-full">
-                                <div class="md:border-y-[1px] py-7 px-6">
-                                    <h4 class="text-h4-p font-medium text-white-01">
+                            <div class="flex basis-1/2 flex-col justify-center w-full md:px-4">
+                                <div class="md:border-y-[1px] p-4">
+                                    <h4 class="sm:text-h4 sm:font-bold text-h4-p font-medium text-white-01">
                                         "Let food be thy medicine and the medicine be thy food"
                                         <br />
                                         -Hippocrates
                                     </h4>
-                                    <div class="md:pt-16 pt-6">
-                                        <h4 class="text-h5-p font-medium text-white-01">
+                                    <div class="flex flex-col md:pt-16 pt-6 gap-2 items-start">
+                                        <h4 class="sm:text-h4 text-h5-p font-medium text-white-01">
                                             Muscadine Grapes
                                         </h4>
-                                        <p
-                                            class="text-normal font-regular text-white-02 md:h-[200px] h-full scoll-product mt-7 md:overflow-y-scroll">
+                                        <p id="prod-p" class="text-normal font-regular text-white-02 md:h-[200px] h-full scoll-product md:overflow-y-scroll clamp-4">
                                             Muscadine Grapes (Vitis rotundifolia), which are native
                                             to the Southeastern United States, have been dubbed “The
                                             Smarter Grape” because it contains 20-pairs of
@@ -466,73 +468,80 @@
                                             Quercetin and OPC (oligomeric proanthocyanidins) and
                                             more.
                                         </p>
+                                        <button id="prod-btn" class="text-body-p text-success-04 font-medium md:hidden block">Read more</button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- mobile view end -->
                         </div>
                     </div>
 
+                    <!-- products -->
                     <div class="flex justify-center sm:py-16 py-6">
-                        <div class="flex flex-col items-center w-full">
-                            <div
-                                class="grid gap-4 md:grid-cols-3 grid-cols-2 auto-rows-max gap-x-4 md:w-2/3 w-full">
-                                <div
-                                    class="flex flex-col rounded-lg overflow-hidden drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
-                                    <div class="bg-theme basis-3/4">
-                                        <img src="assets/image_06.png" class="" alt="" />
-                                    </div>
-
-                                    <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4">
-                                        <span class="text-large text-secondary-02 font-regular">
-                                            MUSNATURAL
-                                        </span>
-                                        <p class="text-normal w-full text-secondary-03 font-regular clamp-2">
-                                            It all began on a trip to Advance, North Carolina
-                                        </p>
-                                        <button class="text-medium text-primary-01 font-medium">
-                                            Read more
-                                        </button>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex flex-col rounded-lg overflow-hidden drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
-                                    <div class="bg-theme basis-3/4">
-                                        <img src="assets/image_06.png" class="" alt="" />
-                                    </div>
-
-                                    <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4">
-                                        <span class="text-large text-secondary-02 font-regular">
-                                            MUSNATURAL
-                                        </span>
-                                        <p class="text-normal w-full text-secondary-03 font-regular clamp-2">
-                                            It all began on a trip to Advance, North Carolina
-                                        </p>
-                                        <button class="text-medium text-primary-01 font-medium">
-                                            Read more
-                                        </button>
+                        <div class="flex flex-col md:items-center items-start w-full">     
+                            <div class="sm:grid sm:gap-4 sm:grid-cols-3 sm:auto-rows-max sm:gap-x-4 sm:w-2/3 w-full w-full flex gap-12 snap-x snap-mandatory overflow-x-auto">
+                                <div class="snap-start scroll-ml-6 shrink-0 relative last:pr-[calc(100%-21.5rem)]">
+                                    <div class="sm:max-w-auto max-w-[300px] rounded-lg overflow-hidden drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
+                                        <div class="flex flex-col">
+                                            <div class="bg-theme basis-3/4">
+                                                <img src="assets/image_06.png" class="" alt="" />
+                                            </div>
+                                            <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4">
+                                                <span class="text-large text-secondary-02 font-regular">
+                                                    MUSNATURAL
+                                                </span>
+                                                <p class="text-normal w-full text-secondary-03 font-regular clamp-2">
+                                                    It all began on a trip to Advance, North Carolina
+                                                </p>
+                                                <button class="text-medium text-primary-01 font-medium">
+                                                    Read more
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="flex flex-col rounded-lg overflow-hidden drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
-                                    <div class="bg-theme basis-3/4">
-                                        <img src="assets/image_06.png" class="" alt="" />
+                                <div class="snap-start scroll-ml-6 shrink-0 relative last:pr-[calc(100%-21.5rem)]">
+                                    <div class="sm:max-w-auto max-w-[300px] rounded-lg overflow-hidden drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
+                                        <div class="flex flex-col">
+                                            <div class="bg-theme basis-3/4">
+                                                <img src="assets/image_06.png" class="" alt="" />
+                                            </div>
+                                            <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4">
+                                                <span class="text-large text-secondary-02 font-regular">
+                                                    MUSNATURAL
+                                                </span>
+                                                <p class="text-normal w-full text-secondary-03 font-regular clamp-2">
+                                                    It all began on a trip to Advance, North Carolina
+                                                </p>
+                                                <button class="text-medium text-primary-01 font-medium">
+                                                    Read more
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4">
-                                        <span class="text-large text-secondary-02 font-regular">
-                                            MUSNATURAL
-                                        </span>
-                                        <p
-                                            class="text-normal w-full text-secondary-03 font-regular clamp-2">
-                                            It all began on a trip to Advance, North Carolina
-                                        </p>
-                                        <button class="text-medium text-primary-01 font-medium">
-                                            Read more
-                                        </button>
+                                </div>
+                                <div class="snap-start scroll-ml-6 shrink-0 relative last:pr-[calc(100%-21.5rem)]">
+                                    <div class="sm:max-w-auto max-w-[300px] rounded-lg overflow-hidden drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
+                                        <div class="flex flex-col">
+                                            <div class="bg-theme basis-3/4">
+                                                <img src="assets/image_06.png" class="" alt="" />
+                                            </div>
+                                            <div class="flex flex-col items-start basis-1/4 bg-white-01 p-4">
+                                                <span class="text-large text-secondary-02 font-regular">
+                                                    MUSNATURAL
+                                                </span>
+                                                <p class="text-normal w-full text-secondary-03 font-regular clamp-2">
+                                                    It all began on a trip to Advance, North Carolina
+                                                </p>
+                                                <button class="text-medium text-primary-01 font-medium">
+                                                    Read more
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-[16px] italic md:w-1/2 text-center pt-16">
+                          
+                            <p class="sm:text-[16px] text-caption-p italic md:w-1/2 text-center pt-16">
                                 These statements have not been evaluated by the Food and Drug
                                 Administration. This product is not Intended to diagnose, treat,
                                 cure or prevent any disease.
@@ -959,8 +968,12 @@
                                 <h5 class="text-h5 text-white-01 font-medium p-4">
                                     IQMK GLOBAL COMPLAIN
                                 </h5>
-                                <div
-                                    class="box-border h-[300px] w-auto border-2 rounded-lg bg-black"></div>
+                                <video class="w-full rounded-lg" autoplay muted controls>
+                                        <source src="assets/sample_video.mp4" type="video/mp4">
+                                    </video>
+                                <!-- <div class="box-border h-[300px] w-auto border-2 rounded-lg bg-black overflow-hidden">
+                                    
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -1805,11 +1818,24 @@
             selected_btn_icon = $('#selected_btn_icon')
             selected_name = $('#selected_name')
 
+            $('#prod-btn').on('click', function () {
+                prod_p = $('#prod-p'); 
+                prod_btn = $(this);
+
+                if ( prod_p.hasClass("clamp-4") ) {
+                    prod_p.removeClass('clamp-4');
+                    prod_btn.text('Read Less');
+                } else {
+                    prod_p.addClass('clamp-4');
+                    prod_btn.text('Read More');
+                }
+            });
+      
             $('#dropdown-states ul li button').on('click', function () {
                 selected_btn_icon.attr('icon', $(this).attr('data-icon'))
                 selected_name.text($(this).attr('data-name'))
             })
-        })
+        });
 
         $(window).scroll(function (event) {
             var st = $(this).scrollTop()
@@ -1853,7 +1879,7 @@
 
             sections.forEach((section) => {
                 scroll(section)
-            })
-        })
+            });
+        });
     </script>
 </html>

@@ -232,7 +232,7 @@
     </head>
     <body>
         <!-- TODO:: add dark mode & light mode -->
-        <div class="w-full overflow-hidden font-worksans items-center relative">
+        <div id="main" class="w-full overflow-hidden font-worksans items-center relative">
             <!-- TODO:: change Navbar & Navbar mobile responsive -->
             <nav id="nav-bg" class="flexStart fixed z-50 top-0  bg-navs-light dark:bg-navs-dark w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                 <div class="xl:max-w-[1280px] w-full">
@@ -1687,8 +1687,7 @@
                                     type="button"
                                     class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                                     data-carousel-prev>
-                                    <span
-                                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                                         <iconify-icon
                                             icon="system-uicons:chevron-left"
                                             width="24"
@@ -1789,8 +1788,7 @@
                     </div>
                 </div>
             </section>
-
-            <!-- TODO: create footer -->
+            
             <!-- footer -->
             <footer id="footer" class="bg-theme flexCenter items-start md:px-16 sm:px-6 px-4">
                 <div class="xl:max-w-[1280px] w-full">
@@ -1850,8 +1848,8 @@
                                             <input type="email" 
                                                 id="website-admin" 
                                                 placeholder="Email Address"
-                                                class="peer form-control rounded-l-full bg-transparent border text-white-01 focus:ring-primary-01 focus:border-primary-01 block flex-1 min-w-0 w-full text-sm py-2.5 px-4">
-                                            <button class="inline-flex items-center px-8 text-secondary-02 font-regular bg-white-01 rounded-r-full border border-r-0 border-white-01">
+                                                class="peer form-control rounded-l-full text-[18px] font-regular bg-transparent border text-white-01 focus:ring-primary-01 focus:border-primary-01 block flex-1 min-w-0 w-full text-sm py-2.5 px-4">
+                                            <button class="inline-flex items-center px-8 text-secondary-02 text-large font-regular bg-white-01 rounded-r-full border border-r-0 border-white-01">
                                                 Sign Up
                                             </button>
                                         </div>
@@ -1883,10 +1881,12 @@
         $(document).ready(function () {
             selected_btn_icon = $('#selected_btn_icon')
             selected_name = $('#selected_name')
+            dropdown = $('#dropdown-states');
 
             $('#prod-btn').on('click', function () {
                 prod_p = $('#prod-p'); 
                 prod_btn = $(this);
+                
 
                 if ( prod_p.hasClass("clamp-4") ) {
                     prod_p.removeClass('clamp-4');
@@ -1900,7 +1900,14 @@
             $('#dropdown-states ul li button').on('click', function () {
                 selected_btn_icon.attr('icon', $(this).attr('data-icon'))
                 selected_name.text($(this).attr('data-name'))
-            })
+                // if (dropdown.hasClass('block')) {
+                //     dropdown.removeClass('block');
+                //     dropdown.addClass('hidden');
+                // }
+                // console.log('block');
+
+                $('#selected_btn').trigger('click');
+            });
         });
 
         $(window).scroll(function (event) {
@@ -1914,31 +1921,39 @@
                     st >= section.position().top
                 ) {
                     if (isLight.includes(section_id)) {
-                        $('#nav-bg').removeClass('bg-navs-dark')
-                        $('#nav-bg').addClass('bg-navs-light')
-                        $('#nav-list li').each(function () {
-                            $(this).removeClass('text-white-01')
-                            $(this).addClass('text-secondary-02')
-                        })
-                        $('#nav-icon').css('color', '#313134')
+                        // $('#nav-bg').removeClass('bg-navs-dark')
+                        // $('#nav-bg').addClass('bg-navs-light')
+                        // $('#nav-list li').each(function () {
+                        //     $(this).removeClass('text-white-01')
+                        //     $(this).addClass('text-secondary-02')
+                        // })
+                        // $('#nav-icon').css('color', '#313134')
 
-                        $('#nav-btn').removeClass('bg-white-01')
-                        $('#nav-btn').addClass('bg-primary-02')
-                        $('#nav-btn button').removeClass('text-secondary-01')
-                        $('#nav-btn button').addClass('text-white-01')
+                        // $('#nav-btn').removeClass('bg-white-01')
+                        // $('#nav-btn').addClass('bg-primary-02')
+                        // $('#nav-btn button').removeClass('text-secondary-01')
+                        // $('#nav-btn button').addClass('text-white-01')
+
+                        if ($('#main').hasClass('dark')) {
+                            $('#main').removeClass('dark');
+                        }
+
                     } else {
-                        $('#nav-bg').removeClass('bg-navs-light')
-                        $('#nav-bg').addClass('bg-navs-dark')
-                        $('#nav-list li').each(function () {
-                            $(this).removeClass('text-secondary-02')
-                            $(this).addClass('text-white-01')
-                        })
-                        $('#nav-icon').css('color', '#FFFFFF')
+                        // $('#nav-bg').removeClass('bg-navs-light')
+                        // $('#nav-bg').addClass('bg-navs-dark')
+                        // $('#nav-list li').each(function () {
+                        //     $(this).removeClass('text-secondary-02')
+                        //     $(this).addClass('text-white-01')
+                        // })
+                        // $('#nav-icon').css('color', '#FFFFFF')
 
-                        $('#nav-btn').removeClass('bg-primary-02')
-                        $('#nav-btn').addClass('bg-white-01')
-                        $('#nav-btn button').removeClass('text-white-01')
-                        $('#nav-btn button').addClass('text-secondary-01')
+                        // $('#nav-btn').removeClass('bg-primary-02')
+                        // $('#nav-btn').addClass('bg-white-01')
+                        // $('#nav-btn button').removeClass('text-white-01')
+                        // $('#nav-btn button').addClass('text-secondary-01')
+                     
+                        $('#main').addClass('dark');
+
                     }
                 }
             }

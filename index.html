@@ -109,11 +109,21 @@
                     focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
                 }
 
-                /* .btn-primary {
-                    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md 
-                        hover:bg-blue-700 
-                        focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
-                } */
+                .flexCenter {
+                    @apply flex justify-center items-start
+                }
+
+                .flexStart {
+                    @apply flex justify-center items-center
+                }
+
+                .paddingX {
+                    @apply md:px-16 sm:px-6 px-4
+                }
+
+                .max_width {
+
+                }
 
                 .input-transparent {
                     @apply w-full px-3 py-2.5 font-normal bg-transparent text-white-01 bg-clip-padding border border-white-03 rounded transition ease-in-out m-0 focus:text-white-01 focus:bg-[#FEF6FA]/[.15] focus:outline-none;
@@ -224,7 +234,7 @@
         <!-- TODO:: add dark mode & light mode -->
         <div class="w-full overflow-hidden font-worksans items-center relative">
             <!-- TODO:: change Navbar & Navbar mobile responsive -->
-            <nav id="nav-bg" class="flex justify-center fixed z-50 top-0 item-center bg-navs-light dark:bg-navs-dark w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+            <nav id="nav-bg" class="flexStart fixed z-50 top-0  bg-navs-light dark:bg-navs-dark w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                 <div class="xl:max-w-[1280px] w-full">
                     <nav class="w-full flex py-2 justify-between items-center">
                         <img src="assets/logo.svg" class="w-[252.23px] h-[54px]" alt="logo.png" />
@@ -274,7 +284,7 @@
             </nav>
 
             <!-- hero -->
-            <section id="hero" class="flex justify-center items-start bg-cover bg-no-repeat sm:px-16 md:px6 px-4"
+            <section id="hero" class="flexCenter paddingX bg-cover bg-no-repeat px-4"
                 style="background-image: url('assets/background.jpg')">
                 <div class="xl:max-w-[1280px] w-full">
                     <div class="flex flex-col items-center justify-center h-screen gap-4">
@@ -294,7 +304,7 @@
             </section>
 
             <!-- about -->
-            <section id="about" class="bg-theme h-full md:px-16 sm:px-6 px-4 flex justify-center items-start relative">
+            <section id="about" class="flexCenter paddingX bg-theme h-full px-4 relative">
                 <div class="absolute top-15% left-auto w-[30%] h-[80%] rounded-full primary__gradient"></div>
                 <div class="xl:max-w-[1280px] md:py-32 sm:py-20 py-11 w-full relative">
                     <!-- header -->
@@ -303,7 +313,7 @@
                         <h2 class="md:w-auto md:border-none sm:text-h2 w-full text-white-01 font-bold text-h3-p border-y">About</h2>
                         <div class="lg:block w-full p-4 border-b-[1px] hidden"></div>
                     </div>
-                    <div class="flex flex-col gap-28 pt-20">
+                    <div class="flex flex-col sm:gap-28 gap-16 pt-20">
                         <!-- mission -->
                         <div class="flex md:flex-row flex-col gap-x-8 items-center">
                             <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
@@ -406,7 +416,7 @@
             </section>
         
             <!-- product -->
-            <section id="product" class="bg-primary-09 md:px-16 sm:px-6 px-4 flex justify-center items-start">
+            <section id="product" class="flexCenter paddingX bg-primary-09 px-4">
                 <div class="xl:max-w-[1280px] w-full py-14">
                     <div class="flex">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-secondary-01 flex-1 sm:text-start text-center md:border-none border-b">
@@ -553,7 +563,7 @@
             </section>
 
             <!-- opportunity -->
-            <section id="opportunity" class="bg-theme flex justify-center items-start md:px-16 sm:px-6 px-4 py-20 relative">
+            <section id="opportunity" class="flexCenter paddingX bg-theme px-4 py-20 relative">
                 <div class="absolute top-15% left-auto w-[30%] h-[70%] z-0 rounded-full primary__gradient"></div>
                 
                 <div class="xl:max-w-[1280px] w-full z-10">
@@ -1106,7 +1116,7 @@
             </section>
 
             <!-- event -->
-            <section id="event" class="bg-primary-07 flex justify-center items-start sm:px-16 md:px-6 px-4 py-20">
+            <section id="event" class="flexCenter paddingX bg-primary-07 px-4 py-20">
                 <div class="xl:max-w-[1280px] w-full">
                     <div class="flex pb-16">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-secondary-02 md:pr-6 md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">
@@ -1576,7 +1586,7 @@
             </section>
 
             <!-- testimonial -->
-            <section id="testimonial" class="bg-theme flex justify-center sm:px-16 px-6 py-20 relative">
+            <section id="testimonial" class="flexCenter paddingX bg-theme px-4 py-20 relative">
                 <div class="absolute top-30% left-auto w-[30%] h-[60%] rounded-full primary__gradient"></div>
                 <div class="xl:max-w-[1280px] w-full">
                     <div class="flex pb-16">
@@ -1704,7 +1714,7 @@
             </section>
 
             <!-- contact -->
-            <section id="contact" class="bg-primary-08 flex justify-center sm:px-16 px-6 py-20">
+            <section id="contact" class="flexCenter paddingX bg-primary-08 px-4 py-20">
                 <div class="xl:max-w-[1280px] w-full">
                     <div class="flex">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-secondary-02 md:pr-6 md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">
@@ -1782,7 +1792,88 @@
 
             <!-- TODO: create footer -->
             <!-- footer -->
-            <footer id="footer"></footer>
+            <footer id="footer" class="bg-theme flexCenter items-start md:px-16 sm:px-6 px-4">
+                <div class="xl:max-w-[1280px] w-full">
+                    <div class="flex pt-16 pb-12">
+                        <div class="flex md:flex-row flex-col-reverse w-full gap-6">
+                            <div class="flex flex-col md:items-start items-centerbasis-2/12">
+                                <div class="flex flex-col items-center">
+                                    <img src="assets/logo_02.png" alt="">
+                                    <img src="assets/logo_03.png" alt="">
+                                </div>
+                                <div class="flex flex-col gap-2 md:items-start items-center">
+                                    <span class="text-caption text-white-03 font-regular">Credit Cards Accepted and Processed in the USA:</span>
+                                    <div class="flex gap-2">
+                                        <img src="assets/Payment method icon.svg" alt="">
+                                        <img src="assets/Payment method icon-1.svg" alt="">
+                                        <img src="assets/Payment method icon-2.svg" alt="">
+                                        <img src="assets/Payment method icon-3.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex md:flex-row flex-col basis-10/12 w-full">
+                                <div class="basis-7/12 grid md:grid-cols-3 grid-cols-2 gap-4">
+                                    <div class="md:flex-1">
+                                        <span class="text-large text-white-01 font-medium">
+                                            Headquarters
+                                        </span>
+                                        <p class="text-normal text-white-03 font-regular">USA</p>
+                                        <p class="text-normal text-white-03 font-regular">Puerto Rico</p>
+                                        <p class="text-normal text-white-03 font-regular">Mexico</p>
+                                        <p class="text-normal text-white-03 font-regular">Philippines</p>
+                                    </div>
+                                    <div class="md:flex-1">
+                                        <span class="text-large text-white-01 font-medium">
+                                            Headquarters
+                                        </span>
+                                        <p class="text-normal text-white-03 font-regular">USA</p>
+                                        <p class="text-normal text-white-03 font-regular">Puerto Rico</p>
+                                        <p class="text-normal text-white-03 font-regular">Mexico</p>
+                                        <p class="text-normal text-white-03 font-regular">Philippines</p>
+                                    </div>
+                                    <div class="md:flex-1">
+                                        <span class="text-large text-white-01 font-medium">
+                                            Headquarters
+                                        </span>
+                                        <p class="text-normal text-white-03 font-regular">USA</p>
+                                        <p class="text-normal text-white-03 font-regular">Puerto Rico</p>
+                                        <p class="text-normal text-white-03 font-regular">Mexico</p>
+                                        <p class="text-normal text-white-03 font-regular">Philippines</p>
+                                    </div>
+                                </div>
+                                <div class="basis-5/12 md:border-l-[1px] border-white-03 md:px-6 md:mt-0 mt-4">
+                                    <span class="text-large text-white-01 font-medium">
+                                        Connect with us
+                                    </span>
+                                    <form class="py-4">
+                                        <div class="flex">
+                                            <input type="email" 
+                                                id="website-admin" 
+                                                placeholder="Email Address"
+                                                class="peer form-control rounded-l-full bg-transparent border text-white-01 focus:ring-primary-01 focus:border-primary-01 block flex-1 min-w-0 w-full text-sm py-2.5 px-4">
+                                            <button class="inline-flex items-center px-8 text-secondary-02 font-regular bg-white-01 rounded-r-full border border-r-0 border-white-01">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div class="flex gap-2">
+                                        <img src="assets/_Facebook.png" alt="">
+                                        <img src="assets/_Instagram.png" alt="">
+                                        <img src="assets/_Twitter.png" alt="">
+                                        <img src="assets/_YouTube.png" alt="">
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="w-full text-center p-4 border-t-[1px]">
+                        <span class="md:text-normal text-caption-p text-white-03 font-regular">
+                            Copyright © IQMK Global - All Rights Reserved
+                        </span>
+                    </div>
+                </div>
+            </footer>
         </div>
     </body>
 

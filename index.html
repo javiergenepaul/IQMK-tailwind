@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- config -->
         <script>
             tailwind.config = {
@@ -237,7 +238,7 @@
             <!-- TODO:: change Navbar & Navbar mobile responsive -->
             <nav id="nav-bg" class="flexStart fixed z-30 top-0 bg-navs-light dark:bg-navs-dark w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                 <div class="xl:max-w-[1280px] w-full">
-                    <nav class="w-full flex py-2 sm:pt-2 pt-8 justify-between items-center">
+                    <nav class="w-full flex py-2 md:pt-2 pt-8 justify-between items-center">
                         <div class="md:hidden flex">
                             <button class="p-2 flex items-center" 
                                 type="button" 
@@ -248,10 +249,10 @@
                                 <iconify-icon icon="system-uicons:menu-hamburger" class="text-secondary-02 dark:text-white-01" width="24" height="24"></iconify-icon>
                             </button>
                         </div>
-                        <img src="assets/logo.svg" class="sm:w-[252.23px] sm:h-[54px] h-[24px]" alt="logo.png" />
+                        <img src="assets/logo.svg" class="md:w-[252.23px] md:h-[54px] sm:h-[30px] h-[24px]" alt="logo.png" />
                         <div class="flex gap-4 items-center">
                             <ul id="nav-list" class="justify-between lg:gap-4 md:flex hidden">
-                                <li key="#hero" class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular px-3">
+                                <li key="#hero" class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular dark:font-regularpx-3">
                                     <a href="#hero">Home</a>
                                 </li>
                                 <li class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular px-3">
@@ -324,7 +325,7 @@
             </nav>
             <!-- drawer -->
             <div id="drawer-body-scrolling" class="fixed md:hidden z-50 h-screen px-4 py-10 overflow-y-auto bg-white-01 w-80 dark:bg-theme transition-transform left-0 top-0 -translate-x-full" tabindex="-1" aria-labelledby="drawer-body-scrolling-label" aria-hidden="true">
-                <div class="flex justify-between items-center">
+                <div  class="flex justify-between items-center">
                     <img src="assets/logo.svg" class="sm:h-[30px] h-[24px]" alt="logo.png" />
                     <button class="bg-transparent text-gray-400 hover:bg-gray-200 hover:text-gray-900 flex items-center" data-drawer-dismiss="drawer-body-scrolling" aria-controls="drawer-body-scrolling" >
                         <iconify-icon icon="system-uicons:close" width="26" height="26"></iconify-icon>
@@ -442,8 +443,8 @@
                 style="background-image: url('assets/background.jpg')">
                 <div class="xl:max-w-[1280px] w-full">
                     <div class="flex flex-col items-center justify-center h-screen gap-4">
-                        <h1 class="sm:font-bold sm:self-center text-white-01 sm:text-h1 text-h2-p font-semibold self-start">IQMK GLOBAL</h1>
-                        <h3 class="sm:text-h3 sm:font-medium sm:text-center text-white-01 text-h6-p text-start font-semibold">
+                        <h1 data-aos="zoom-in" class="sm:font-bold sm:self-center text-white-01 sm:text-h1 text-h2-p font-semibold self-start">IQMK GLOBAL</h1>
+                        <h3 data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400" class="sm:text-h3 sm:font-medium sm:text-center text-white-01 text-h6-p text-start font-semibold">
                             A Global Movement of Health and Hope.
                         </h3>
                         <p class="text-white-01 sm:text-h5 sm:font-medium text-bodyp sm:text-center text-start">
@@ -462,14 +463,14 @@
                 <div class="absolute top-15% left-auto w-[30%] h-[80%] rounded-full primary__gradient"></div>
                 <div class="xl:max-w-[1280px] paddingY w-full relative">
                     <!-- header -->
-                    <div class="flex justify-center gap-x-11 text-center">
+                    <div data-aos="fade-up" class="flex justify-center gap-x-11 text-center">
                         <div class="lg:block w-full p-4 border-b-[1px] hidden"></div>
                         <h2 class="md:w-auto md:border-none sm:text-h2 w-full text-white-01 font-bold text-h3-p border-y">About</h2>
                         <div class="lg:block w-full p-4 border-b-[1px] hidden"></div>
                     </div>
                     <div class="flex flex-col sm:gap-28 gap-16 pt-20">
                         <!-- mission -->
-                        <div class="flex md:flex-row flex-col gap-x-8 items-center">
+                        <div data-aos="fade-right" class="flex md:flex-row flex-col gap-x-8 items-center">
                             <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="sm:h-auto h-[300px]" alt="image_01.png" />
                                 <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
@@ -496,7 +497,7 @@
                         </div>
 
                         <!-- vision -->
-                        <div class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
+                        <div data-aos="fade-left" class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
                             <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
                                 <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Vision</h3>
                                 <h4 class="text-white-02 sm:text-h4 text-subtitle1 font-medium pt-4">
@@ -509,7 +510,7 @@
                                     health benefits through just one premium, all-natural food
                                     source.
                                 </p>
-                                <button class="py-2 px-28 mt-4 text-h5 font-medium btn-outline-primary md:w-auto w-full">
+                                <button class="py-2 px-28 mt-4 sm:text-h5 xs:text-[18px] font-medium btn-outline-primary md:w-auto w-full">
                                     READ MORE
                                 </button>
                             </div>
@@ -520,7 +521,7 @@
                         </div>
 
                         <!-- commitment -->
-                        <div class="flex md:flex-row flex-col gap-x-8 items-center">
+                        <div data-aos="fade-right" class="flex md:flex-row flex-col gap-x-8 items-center">
                             <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="sm:h-auto h-[300px]" alt="image_01.png" />
                                 <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
@@ -535,14 +536,14 @@
                                     each person is unique and gifted and deserving of every
                                     opportunity to succeed to the fullest extent. We believe that by
                                 </p>
-                                <button class="py-2 px-28 mt-4 text-h5 font-medium btn-outline-primary md:w-auto w-full">
+                                <button class="py-2 px-28 mt-4 sm:text-h5 text-[18px] font-medium btn-outline-primary md:w-auto w-full">
                                     READ MORE
                                 </button>
                             </div>
                         </div>
 
                         <!-- our Business model -->
-                        <div class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
+                        <div data-aos="fade-left" class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
                             <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
                                 <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Our Business Model</h3>
                                 <p class="text-white-03 sm:text-normal text-bodyp pt-2">
@@ -552,7 +553,7 @@
                                     health benefits through just one premium, all-natural food
                                     source.
                                 </p>
-                                <button class="py-2 px-28 mt-4 text-h5 font-medium btn-outline-primary md:w-auto w-full">
+                                <button class="py-2 px-28 mt-4 sm:text-h5 text-[18px] font-medium btn-outline-primary md:w-auto w-full">
                                     READ MORE
                                 </button>
                             </div>
@@ -2071,7 +2072,7 @@
                             </div>
                             <div class="flex md:flex-row flex-col basis-10/12 w-full">
                                 <!-- TODO:: change basis-7/12 to adjust -->
-                                <div class="basis-7/12 grid md:grid-cols-3 grid-cols-2 gap-4">
+                                <div class="md:basis-7/12 grid md:grid-cols-3 grid-cols-2 gap-4">
                                     <div class="md:flex-1">
                                         <span class="text-large text-white-01 font-medium">
                                             Headquarters
@@ -2101,19 +2102,16 @@
                                     </div>
                                 </div>
                                 <!-- TODO:: change basis-5/12 to adjust -->
-                                <div class="basis-5/12 md:border-l-[1px] border-white-03 md:pl-6 md:mt-0 mt-4">
+                                <div class="md:basis-5/12 md:border-l-[1px] border-white-03 md:pl-6 md:mt-0 mt-4">
                                     <span class="text-large text-white-01 font-medium">
                                         Connect with us
                                     </span>
                                     <form class="py-4">
-                                        <div class="flex">
-                                            <input type="email" 
-                                                id="website-admin" 
-                                                placeholder="Email Address"
-                                                class="peer form-control rounded-l-full text-[18px] font-regular bg-transparent border text-white-01 focus:ring-primary-01 focus:border-primary-01 block flex-1 min-w-0 w-full text-sm py-2.5 px-4">
-                                            <button class="inline-flex items-center px-8 text-secondary-02 text-large font-regular bg-white-01 rounded-r-full border border-r-0 border-white-01">
-                                                Sign Up
-                                            </button>
+                                        <div class="relative rounded-full">
+                                            <input type="text" class="block bg-transparent w-full border border-white-01 text-white-01 outline-none  rounded-full px-4 py-2" placeholder="Email address">
+                                            <div class="absolute inset-y-0 right-0 flex items-center">
+                                                <button class="bg-white-01 text-secondary-01 py-2 px-4 rounded-r-full">Sign Up</button>
+                                            </div>
                                         </div>
                                     </form>
                                     <div class="flex gap-2">
@@ -2125,7 +2123,6 @@
                                 </div>
                             </div>
                         </div>
-                       
                     </div>
                     <div class="w-full text-center p-4 border-t-[1px]">
                         <span class="md:text-normal text-caption-p text-white-03 font-regular">
@@ -2144,180 +2141,183 @@
     <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+        AOS.init({
+            offset: 200,
+            duration: 300,
+            easing: 'ease-in-sine',
+        });
+    $(document).ready(function () {
+        selected_btn_icon = $('#selected_btn_icon')
+        selected_name = $('#selected_name')
+        dropdown = $('#dropdown-states');
 
+        const testimony_items = [
+            {
+                position: 0,
+                el: document.getElementById('testimony-item-1')
+            },
+            {
+                position: 1,
+                el: document.getElementById('testimony-item-2')
+            },
+            {
+                position: 2,
+                el: document.getElementById('testimony-item-3')
+            },
+            {
+                position: 3,
+                el: document.getElementById('testimony-item-4')
+            },
+        ];
 
-
-        $(document).ready(function () {
-            selected_btn_icon = $('#selected_btn_icon')
-            selected_name = $('#selected_name')
-            dropdown = $('#dropdown-states');
-
-            const testimony_items = [
-                {
-                    position: 0,
-                    el: document.getElementById('testimony-item-1')
-                },
-                {
-                    position: 1,
-                    el: document.getElementById('testimony-item-2')
-                },
-                {
-                    position: 2,
-                    el: document.getElementById('testimony-item-3')
-                },
-                {
-                    position: 3,
-                    el: document.getElementById('testimony-item-4')
-                },
-            ];
-
-            const testimony_options = {
-                activeItemPosition: 1,
-                interval: 5000,
-                
-                indicators: {
-                    activeClasses: 'bg-secondary-04 sm:p-[8px] p-[6px]',
-                    inactiveClasses: 'bg-secondary-05 transition ease-in-out delay-1500',
-                    items: [
-                        {
-                            position: 0,
-                            el: document.getElementById('testimony-indicator-1')
-                        },
-                        {
-                            position: 1,
-                            el: document.getElementById('testimony-indicator-2')
-                        },
-                        {
-                            position: 2,
-                            el: document.getElementById('testimony-indicator-3')
-                        },
-                        {
-                            position: 3,
-                            el: document.getElementById('testimony-indicator-4')
-                        },
-                    ]
-                },
-            };
+        const testimony_options = {
+            activeItemPosition: 1,
+            interval: 5000,
             
-            const event_items = [
-                {
-                    position: 0,
-                    el: document.getElementById('event-item-1')
-                },
-                {
-                    position: 1,
-                    el: document.getElementById('event-item-2')
-                },
-                {
-                    position: 2,
-                    el: document.getElementById('event-item-3')
-                },
-                {
-                    position: 3,
-                    el: document.getElementById('event-item-4')
-                },
-            ];
-
-            const event_options = {
-                activeItemPosition: 1,
-                interval: 5000,
-                
-                indicators: {
-                    activeClasses: 'bg-secondary-04 sm:p-[8px] p-[6px]',
-                    inactiveClasses: 'bg-secondary-05 transition ease-in-out delay-1500',
-                    items: [
-                        {
-                            position: 0,
-                            el: document.getElementById('event-indicator-1')
-                        },
-                        {
-                            position: 1,
-                            el: document.getElementById('event-indicator-2')
-                        },
-                        {
-                            position: 2,
-                            el: document.getElementById('event-indicator-3')
-                        },
-                        {
-                            position: 3,
-                            el: document.getElementById('event-indicator-4')
-                        },
-                    ]
-                },
-            };
-            
-            const testimony_carousel = new Carousel(testimony_items, testimony_options);
-            const event = new Carousel(event_items, event_options);
-            testimony_carousel.cycle()
-            event.cycle()
-
+            indicators: {
+                activeClasses: 'bg-secondary-04 sm:p-[8px] p-[6px]',
+                inactiveClasses: 'bg-secondary-05 transition ease-in-out delay-1500',
+                items: [
+                    {
+                        position: 0,
+                        el: document.getElementById('testimony-indicator-1')
+                    },
+                    {
+                        position: 1,
+                        el: document.getElementById('testimony-indicator-2')
+                    },
+                    {
+                        position: 2,
+                        el: document.getElementById('testimony-indicator-3')
+                    },
+                    {
+                        position: 3,
+                        el: document.getElementById('testimony-indicator-4')
+                    },
+                ]
+            },
+        };
         
-            $('.ui-loader').hide();
+        const event_items = [
+            {
+                position: 0,
+                el: document.getElementById('event-item-1')
+            },
+            {
+                position: 1,
+                el: document.getElementById('event-item-2')
+            },
+            {
+                position: 2,
+                el: document.getElementById('event-item-3')
+            },
+            {
+                position: 3,
+                el: document.getElementById('event-item-4')
+            },
+        ];
 
-            $('#testimony-prev').on('click', function() {
-                testimony_carousel.prev();
-            });
-
-            $('#testimony-next').on('click', function() {
-                testimony_carousel.next();
-            });
-
-            $('#testimony').on("swipeleft", function(e){
-                testimony_carousel.next();
-            });
-
-            $('#testimony').on("swiperight", function(e){
-                testimony_carousel.prev();
-            });
-
-            $('#event_carousel').on("swipeleft", function(e){
-                event.next();
-            });
+        const event_options = {
+            activeItemPosition: 1,
+            interval: 5000,
             
-            $('#event_carousel').on("swiperight", function(e){
-                event.prev();
-            });
+            indicators: {
+                activeClasses: 'bg-secondary-04 sm:p-[8px] p-[6px]',
+                inactiveClasses: 'bg-secondary-05 transition ease-in-out delay-1500',
+                items: [
+                    {
+                        position: 0,
+                        el: document.getElementById('event-indicator-1')
+                    },
+                    {
+                        position: 1,
+                        el: document.getElementById('event-indicator-2')
+                    },
+                    {
+                        position: 2,
+                        el: document.getElementById('event-indicator-3')
+                    },
+                    {
+                        position: 3,
+                        el: document.getElementById('event-indicator-4')
+                    },
+                ]
+            },
+        };
+        
+        const testimony_carousel = new Carousel(testimony_items, testimony_options);
+        const event = new Carousel(event_items, event_options);
+        testimony_carousel.cycle()
+        event.cycle()
 
-            $('#prod-btn').on('click', function () {
-                prod_p = $('#prod-p'); 
-                prod_btn = $(this);
-                
+    
+        $('.ui-loader').hide();
 
-                if ( prod_p.hasClass("clamp-4") ) {
-                    prod_p.removeClass('clamp-4');
-                    prod_btn.text('Read Less');
-                } else {
-                    prod_p.addClass('clamp-4');
-                    prod_btn.text('Read More');
-                }
-            });
-      
-            $('#dropdown-states ul li button').on('click', function () {
-                selected_btn_icon.attr('icon', $(this).attr('data-icon'));
-                selected_name.text($(this).attr('data-name'));
-                $('#selected_btn').trigger('click');
-            });
-
-            $('#dropdown-lang ul li button').on('click', function () {
-                $('#selected_lang_icon').attr('icon', $(this).attr('data-icon'));
-                $('#selected_lang_btn').trigger('click');
-            });
-
-            $("#nav-list a").click(function(event) {
-                section = $($(this).attr('href'));
-
-                $('html, body').animate({
-                    scrollTop: section.offset().top
-                }, {
-                    duration: "slow",
-                    easing: "easeInSine"
-                });
-            });
+        $('#testimony-prev').on('click', function() {
+            testimony_carousel.prev();
         });
 
-        $(window).scroll(function (event) {
+        $('#testimony-next').on('click', function() {
+            testimony_carousel.next();
+        });
+
+        $('#testimony').on("swipeleft", function(e){
+            testimony_carousel.next();
+        });
+
+        $('#testimony').on("swiperight", function(e){
+            testimony_carousel.prev();
+        });
+
+        $('#event_carousel').on("swipeleft", function(e){
+            event.next();
+        });
+        
+        $('#event_carousel').on("swiperight", function(e){
+            event.prev();
+        });
+
+        $('#prod-btn').on('click', function () {
+            prod_p = $('#prod-p'); 
+            prod_btn = $(this);
+            
+
+            if ( prod_p.hasClass("clamp-4") ) {
+                prod_p.removeClass('clamp-4');
+                prod_btn.text('Read Less');
+            } else {
+                prod_p.addClass('clamp-4');
+                prod_btn.text('Read More');
+            }
+        });
+    
+        $('#dropdown-states ul li button').on('click', function () {
+            selected_btn_icon.attr('icon', $(this).attr('data-icon'));
+            selected_name.text($(this).attr('data-name'));
+            $('#selected_btn').trigger('click');
+        });
+
+        $('#dropdown-lang ul li button').on('click', function () {
+            $('#selected_lang_icon').attr('icon', $(this).attr('data-icon'));
+            $('#selected_lang_btn').trigger('click');
+        });
+
+        $("#nav-list a").click(function(event) {
+            section = $($(this).attr('href'));
+
+            $('html, body').animate({
+                scrollTop: section.offset().top
+            }, {
+                duration: "slow",
+                easing: "easeInSine"
+            });
+        });
+    });
+
+    $(window).scroll(function (event) {
             var st = $(this).scrollTop()
             sections = ['hero', 'about', 'product', 'opportunity', 'event', 'testimonial', 'contact']
             isLight = ['hero', 'about', 'opportunity','testimonial']

@@ -236,7 +236,7 @@
         <!-- TODO:: add dark mode & light mode -->
         <div id="main" class="w-full overflow-hidden font-worksans items-center relative">
             <!-- TODO:: change Navbar & Navbar mobile responsive -->
-            <nav id="nav-bg" class="flexStart fixed z-30 top-0 bg-navs-light dark:bg-navs-dark w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
+            <nav id="nav-bg" class="flexStart fixed z-30 top-0 bg-white-01/10 backdrop-blur-[20px]  dark:bg-navs-dark w-full drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                 <div class="xl:max-w-[1280px] w-full">
                     <nav class="w-full flex py-2 md:pt-2 pt-8 justify-between items-center">
                         <div class="md:hidden flex">
@@ -246,37 +246,40 @@
                                 data-drawer-show="drawer-body-scrolling" 
                                 data-drawer-body-scrolling="true" 
                                 aria-controls="drawer-body-scrolling">
-                                <iconify-icon icon="system-uicons:menu-hamburger" class="text-secondary-02 dark:text-white-01" width="24" height="24"></iconify-icon>
+                                <iconify-icon icon="system-uicons:menu-hamburger" class="text-white-01 dark:text-white-01" width="24" height="24"></iconify-icon>
                             </button>
                         </div>
-                        <img src="assets/logo.svg" class="md:w-[252.23px] md:h-[54px] sm:h-[30px] h-[24px]" alt="logo.png" />
+                        <div class="py-[0px] px-[2px] bg-white-01 rounded-[24px]">
+
+                            <img src="assets/logo.svg" class="md:w-[252.23px] md:h-[54px] sm:h-[30px] h-[24px]" alt="logo.png" />
+                        </div>
                         <div class="flex gap-4 items-center">
                             <ul id="nav-list" class="justify-between lg:gap-4 md:flex hidden">
-                                <li key="#hero" class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular dark:font-regularpx-3">
+                                <li key="#hero" class="cursor-pointer text-white-02 dark:text-white-01 text-large font-regular dark:font-regularpx-3">
                                     <a href="#hero">Home</a>
                                 </li>
-                                <li class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular px-3">
+                                <li class="cursor-pointer text-white-02 dark:text-white-01 text-large font-regular px-3">
                                     <a href="#about">About</a> 
                                 </li>
-                                <li class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular px-3">
+                                <li class="cursor-pointer text-white-02 dark:text-white-01 text-large font-regular px-3">
                                     <a href="#product">Products</a> 
                                 </li>
-                                <li class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular px-3">
+                                <li class="cursor-pointer text-white-02 dark:text-white-01 text-large font-regular px-3">
                                     <a href="#opportunity">Opportunity</a> 
                                 </li>
-                                <li class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular px-3">
+                                <li class="cursor-pointer text-white-02 dark:text-white-01 text-large font-regular px-3">
                                     <a href="#event">Event</a>
                                 </li>
-                                <li class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular px-3">
+                                <li class="cursor-pointer text-white-02 dark:text-white-01 text-large font-regular px-3">
                                     <a href="#shop">Shop</a> 
                                 </li>
-                                <li class="cursor-pointer text-secondary-02 dark:text-white-01 text-large font-regular px-3">
+                                <li class="cursor-pointer text-white-02 dark:text-white-01 text-large font-regular px-3">
                                     <a href="#contact">Contact</a> 
                                 </li>
                                 <li>
                                     <button id="selected_lang_btn" data-dropdown-toggle="dropdown-lang" class="pt-[2px] inline-flex px-3 items-center" type="button">
                                         <iconify-icon id="selected_lang_icon" class="text-white-01" icon="flagpack:ph"></iconify-icon>
-                                        <iconify-icon icon="system-uicons:chevron-down" class="dark:text-white-01" width="24" height="24"></iconify-icon>
+                                        <iconify-icon icon="system-uicons:chevron-down" class="text-white-01" width="24" height="24"></iconify-icon>
                                     </button>
                                     <div id="dropdown-lang" class="hidden z-30 bg-white-02 dark:bg-primary-01 rounded divide-y divide-gray-100 shadow">
                                         <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
@@ -310,12 +313,12 @@
                            
                             <button class="px-6 py-3 btn-primary dark:btn-outline-primary text-small text-white-01 md:block hidden">Sign up</button>
                             <div class="p-2 flex items-center">
-                                <button class="bg-transparent">
+                                <button class="bg-transparent flex items-center">
                                     <iconify-icon
                                         id="nav-icon"
                                         icon="system-uicons:cart"
                                         width="24"
-                                        height="24" class="text-secondary-02 dark:text-white-01"></iconify-icon>
+                                        height="24" class="text-white-02 dark:text-white-01"></iconify-icon>
                                 </button>
                                 
                             </div>
@@ -324,7 +327,7 @@
                 </div>
             </nav>
             <!-- drawer -->
-            <div id="drawer-body-scrolling" class="fixed md:hidden z-50 h-screen px-4 py-10 overflow-y-auto bg-white-01 w-80 dark:bg-theme transition-transform left-0 top-0 -translate-x-full" tabindex="-1" aria-labelledby="drawer-body-scrolling-label" aria-hidden="true">
+            <div id="drawer-body-scrolling" class="fixed md:hidden z-50 h-screen px-4 py-10 overflow-y-auto bg-white-01  w-80 transition-transform left-0 top-0 -translate-x-full" tabindex="-1" aria-labelledby="drawer-body-scrolling-label" aria-hidden="true">
                 <div  class="flex justify-between items-center">
                     <img src="assets/logo.svg" class="sm:h-[30px] h-[24px]" alt="logo.png" />
                     <button class="bg-transparent text-gray-400 hover:bg-gray-200 hover:text-gray-900 flex items-center" data-drawer-dismiss="drawer-body-scrolling" aria-controls="drawer-body-scrolling" >
@@ -336,44 +339,44 @@
                 <div class="py-4 overflow-y-auto">
                     <ul class="space-y-2">
                         <li>
-                            <a href="#home" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="#home" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                                 <!-- <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg> -->
                                 <iconify-icon icon="system-uicons:home-door" width="24" height="24"></iconify-icon>
                                 <span class="ml-3">Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#about" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="#about" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                                 <iconify-icon icon="system-uicons:document" width="24" height="24"></iconify-icon>
                                 <span class="ml-3">About</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#products" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="#products" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                                 <iconify-icon icon="system-uicons:box" width="24" height="24"></iconify-icon>
                                 <span class="ml-3">Products</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#opportunity" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="#opportunity" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                                 <iconify-icon icon="system-uicons:lightbulb-on" width="24" height="24"></iconify-icon>
                                 <span class="ml-3">Opportunity</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#event" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="#event" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                                 <iconify-icon icon="system-uicons:calendar-date" width="24" height="24"></iconify-icon>
                                 <span class="ml-3">Event</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#contact" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="#contact" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                                 <iconify-icon icon="system-uicons:contacts" width="24" height="24"></iconify-icon>
                                 <span class="ml-3">Contact</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#shop" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="#shop" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                                 <iconify-icon icon="system-uicons:cart" width="24" height="24"></iconify-icon>
                                 <span class="ml-3">Shop</span>
                             </a>
@@ -470,12 +473,12 @@
                     </div>
                     <div class="flex flex-col sm:gap-28 gap-16 pt-20">
                         <!-- mission -->
-                        <div data-aos="fade-right" class="flex md:flex-row flex-col gap-x-8 items-center">
-                            <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
+                        <div class="flex md:flex-row flex-col gap-x-8 items-center">
+                            <div data-aos="fade-up" class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="sm:h-auto h-[300px]" alt="image_01.png" />
                                 <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
-                            <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
+                            <div data-aos="fade-up" class="md:py-[109px] py-6 sm:px-8 basis-2/3">
                                 <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Mission</h3>
                                 <h4 class="text-white-02 sm:text-h4 text-subtitle1 font-medium pt-4">
                                     Welcome to IQMK Global
@@ -497,8 +500,8 @@
                         </div>
 
                         <!-- vision -->
-                        <div data-aos="fade-left" class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
-                            <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
+                        <div class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
+                            <div data-aos="fade-up" class="md:py-[109px] py-6 sm:px-8 basis-2/3">
                                 <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Vision</h3>
                                 <h4 class="text-white-02 sm:text-h4 text-subtitle1 font-medium pt-4">
                                     The IQMK Global vision
@@ -514,19 +517,19 @@
                                     READ MORE
                                 </button>
                             </div>
-                            <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
+                            <div data-aos="fade-up" class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="sm:h-auto h-[300px]" alt="image_01.png" />
                                 <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
                         </div>
 
                         <!-- commitment -->
-                        <div data-aos="fade-right" class="flex md:flex-row flex-col gap-x-8 items-center">
-                            <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
+                        <div class="flex md:flex-row flex-col gap-x-8 items-center">
+                            <div data-aos="fade-up" class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="sm:h-auto h-[300px]" alt="image_01.png" />
                                 <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
-                            <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
+                            <div data-aos="fade-up" class="md:py-[109px] py-6 sm:px-8 basis-2/3">
                                 <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Commitment</h3>
                                 <p class="text-white-03 sm:text-normal text-bodyp pt-2">
                                     Our aim is to provide all our partners the opportunity to
@@ -543,8 +546,8 @@
                         </div>
 
                         <!-- our Business model -->
-                        <div data-aos="fade-left" class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
-                            <div class="md:py-[109px] py-6 sm:px-8 basis-2/3">
+                        <div data-aos="fade-up" class="flex md:flex-row flex-col-reverse gap-x-8 items-center">
+                            <div data-aos="fade-up" class="md:py-[109px] py-6 sm:px-8 basis-2/3">
                                 <h3 class="text-white-01 sm:text-h3 text-h4-p sm:font-bold font-medium">Our Business Model</h3>
                                 <p class="text-white-03 sm:text-normal text-bodyp pt-2">
                                     IQMK Global Is Passionate about improving the quality of
@@ -557,7 +560,7 @@
                                     READ MORE
                                 </button>
                             </div>
-                            <div class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
+                            <div data-aos="fade-up" class="basis-1/3 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_01.png" class="sm:h-auto h-[300px]" alt="image_01.png" />
                                 <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
                             </div>
@@ -569,7 +572,7 @@
             <!-- product -->
             <section id="product" class="flexCenter paddingX bg-primary-09 px-4">
                 <div class="xl:max-w-[1280px] paddingY w-full">
-                    <div class="flex">
+                    <div data-aos="fade-up" class="flex">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-secondary-01 flex-1 sm:text-start text-center md:border-none border-b">
                             Products You Can Trust
                         </h2>
@@ -577,7 +580,7 @@
                     </div>
 
                     <!-- grapes -->
-                    <div class="flex py-16">
+                    <div data-aos="fade-up" class="flex py-16">
                         <div class="bg-theme flex md:flex-row flex-col w-full justify-between rounded-lg relative">
 
                             <div class="absolute pointer-events-none -left-4 -top-4 w-full h-full border border-secondary-04 z-10 rounded-lg md:block hidden"></div>
@@ -585,7 +588,7 @@
                             <div class="basis-1/2 object-cover h-[851px] relative rounded-t-lg overflow-hidden md:block hidden"
                                 style="background-image: url('assets/image_05.png')">
                                 <div class="w-full h-full bg-shade ">
-                                    <div class="flex flex-col h-full w-full px-[83px] py-[83px] pb-8">
+                                    <div data-aos="fade-up" class="flex flex-col h-full w-full px-[83px] py-[83px] pb-8">
                                         <div class="flex">
                                             <h3 class="text-white-01 font-bold text-h4 basis-1/2">
                                                 IQMK GLOBAL <br />
@@ -602,7 +605,7 @@
                             </div>
                             <img src="assets/image_05.png" class="rounded-t-lg h-[340px] object-cover md:hidden block" alt="">
                             <div class="flex basis-1/2 flex-col justify-center w-full md:px-4">
-                                <div class="md:border-y-[1px] p-4">
+                                <div data-aos="fade-up" class="md:border-y-[1px] p-4">
                                     <h4 class="sm:text-h4 sm:font-bold text-h4-p font-medium text-white-01">
                                         "Let food be thy medicine and the medicine be thy food"
                                         <br />
@@ -640,7 +643,7 @@
                     <!-- products -->
                     <div class="flex justify-center sm:pt-16 pt-6">
                         <div class="flex flex-col sm:items-center items-start w-full">     
-                            <div class="sm:grid sm:gap-4 sm:grid-cols-3 sm:auto-rows-max sm:gap-x-4 md:w-2/3 w-full w-full flex gap-12 snap-x snap-mandatory overflow-x-auto">
+                            <div data-aos="fade-up" class="sm:grid sm:gap-4 sm:grid-cols-3 sm:auto-rows-max sm:gap-x-4 md:w-2/3 w-full w-full flex gap-12 snap-x snap-mandatory overflow-x-auto">
                                 <div class="snap-start scroll-ml-6 shrink-0 relative last:pr-[calc(100%-21.5rem)]">
                                     <div class="sm:max-w-auto max-w-[300px] rounded-lg overflow-hidden drop-shadow-[0_2px_19px_rgba(0,0,0,0.15)]">
                                         <div class="flex flex-col">
@@ -703,7 +706,7 @@
                                 </div>
                             </div>
                           
-                            <p class="sm:text-[16px] text-caption-p italic md:w-1/2 text-center pt-16">
+                            <p data-aos="fade-up" class="sm:text-[16px] text-caption-p italic md:w-1/2 text-center pt-16">
                                 These statements have not been evaluated by the Food and Drug
                                 Administration. This product is not Intended to diagnose, treat,
                                 cure or prevent any disease.
@@ -718,7 +721,7 @@
                 <div class="absolute top-15% left-auto w-[30%] h-[70%] z-0 rounded-full primary__gradient"></div>
                 
                 <div class="xl:max-w-[1280px] paddingY w-full z-10">
-                    <div class="flex">
+                    <div data-aos="fade-up" class="flex">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-white-01 md:pr-6 md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">
                             Opportunity
                         </h2>
@@ -726,14 +729,14 @@
                     </div>
 
                     <!-- change your lifestyle -->
-                    <div class="sm:py-16 py-16">
+                    <div data-aos="fade-up" class="sm:py-16 py-16">
                         <div class="md:block hidden">
                             <div class="w-full flex items-center justify-center h-[1080px] object-cover rounded-lg relative"
                                 style="background-image: url('assets/image_09.png')">
-                                <div class="absolute pointer-events-none -left-4 top-4 w-full h-full border border-secondary-04 z-10 rounded-lg"></div>
+                                <div  class="absolute pointer-events-none -left-4 top-4 w-full h-full border border-secondary-04 z-10 rounded-lg"></div>
                                 <div class="absolute pointer-events-none left-4 -top-4 w-full h-full border border-secondary-04 z-10 rounded-lg"></div>
 
-                                <div class="p-16 bg-[#40082B]/40 rounded-lg basis-10/12">
+                                <div data-aos="fade-up" class="p-16 bg-[#40082B]/40 rounded-lg basis-10/12">
                                     <h3 class="text-h3 text-white-02 font-semibold">
                                         Change Your Lifestyle Today!
                                     </h3>
@@ -754,9 +757,9 @@
                         </div>
 
                         <div class="flex flex-col md:hidden block"">
-                            <img src="assets/changelifestyle.png" class="sm:h-[550px] h-[350px] rounded-lg w-full object-cover"  alt="">
-                            <h6 class="text-h6-p text-white-02 font-semibold py-8">Change Your Lifestyle Today!</h6>
-                            <h5 class="text-h5-p text-white-03 font-medium">
+                            <img data-aos="fade-up" src="assets/changelifestyle.png" class="sm:h-[550px] h-[350px] rounded-lg w-full object-cover"  alt="">
+                            <h6 data-aos="fade-up" class="text-h6-p text-white-02 font-semibold py-8">Change Your Lifestyle Today!</h6>
+                            <h5 data-aos="fade-up" class="text-h5-p text-white-03 font-medium">
                                 Some people live simply to work… their lives revolve around earning a paycheck so that they can meet bills and get out of bed again to work the next day… and pay more bills.
                                 <br>
                                 <br>
@@ -770,7 +773,7 @@
 
                     <!-- join iqmk -->
                     <div class="sm:py-16 pb-16">
-                        <div class="bg-white-02 w-full flex flex-row md:rounded-tl-[151px] rounded-tl-[25px] rounded-tr-lg md:rounded-br-[151px] rounded-br-[25px] rounded-bl-lg  items-center relative">
+                        <div data-aos="fade-up" class="bg-white-02 w-full flex flex-row md:rounded-tl-[151px] rounded-tl-[25px] rounded-tr-lg md:rounded-br-[151px] rounded-br-[25px] rounded-bl-lg  items-center relative">
                             <div class="absolute pointer-events-none left-4 top-4 w-full h-full border border-secondary-04 z-10 rounded-tl-[151px] rounded-br-[151px] md:block hidden"></div>
                             <div class="absolute pointer-events-none -left-4 -top-4 w-full h-full border border-secondary-04 z-10 rounded-tl-[151px] rounded-br-[151px] md:block hidden"></div>
                             <div class="md:py-16 md:px-16 py-7 px-4 basis-2/3">
@@ -827,12 +830,12 @@
                     <!-- TODO:: see more button -->
                     <!-- enrollment package -->
                     <div class="sm:py-16 pb-16">
-                        <div class="w-full flex justify-start pb-16">
+                        <div data-aos="fade-up" class="w-full flex justify-start pb-16">
                             <h2 class="sm:text-h2 text-h3-p text-white-01 sm:font-bold font-semibold md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">Our enrollment package</h2>
                         </div>
                         <div class="flex flex-col w-full">
                             <div class="grid gap-4 md:grid-cols-4 sm:grid-cols-2 grid-col-1 auto-rows-max gap-x-6 w-full">
-                                <div class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
+                                <div data-aos="fade-up" class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
                                     <div class="pb-6">
                                         <span class="text-h4 text-secondary-03 font-bold leading-none">$</span>
                                         <span class="text-h1 text-secondary-02 font-bold leading-none">150</span>
@@ -889,7 +892,7 @@
                                         </button>
                                     </h5>
                                 </div>
-                                <div class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
+                                <div data-aos="fade-up" class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
                                     <div class="pb-6">
                                         <span class="text-h4 text-secondary-03 font-bold leading-none">$</span>
                                         <span class="text-h1 text-secondary-02 font-bold leading-none">150</span>
@@ -946,7 +949,7 @@
                                         </button>
                                     </h5>
                                 </div>
-                                <div class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
+                                <div data-aos="fade-up" class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
                                     <div class="pb-6">
                                         <span class="text-h4 text-secondary-03 font-bold leading-none">$</span>
                                         <span class="text-h1 text-secondary-02 font-bold leading-none">150</span>
@@ -1003,7 +1006,7 @@
                                         </button>
                                     </h5>
                                 </div>
-                                <div class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
+                                <div data-aos="fade-up" class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
                                     <div class="pb-6">
                                         <span class="text-h4 text-secondary-03 font-bold leading-none">$</span>
                                         <span class="text-h1 text-secondary-02 font-bold leading-none">150</span>
@@ -1066,12 +1069,12 @@
 
                     <!-- compensation plan -->
                     <div class="sm:py-16 py-6">
-                        <div class="w-full flex justify-center">
+                        <div data-aos="fade-up" class="w-full flex justify-center">
                             <h2 class="sm:text-h2 text-h3-p text-white-01 sm:font-bold font-semibold md:pr-6 md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">
                                 Compensation Plan
                             </h2>
                         </div>
-                        <div class="flex sm:flex-row flex-col items-center gap-6 py-16">
+                        <div data-aos="fade-up" class="flex sm:flex-row flex-col items-center gap-6 py-16">
                             <div class="basis-1/2">
                                 <div class="flex flex-col">
                                     <h3 class="md:text-h3 sm:text-h4-p text-h5-p text-white-01 sm:font-semibold font-medium">
@@ -1097,13 +1100,13 @@
                     </div>
 
                     <!-- find distri -->
-                    <div class="pb-6">
-                        <div class="w-full flex justify-center pb-16 sm:hidden block">
+                    <div  class="pb-6">
+                        <div data-aos="fade-up" class="w-full flex justify-center pb-16 sm:hidden block">
                             <h2 class="sm:text-h2 text-h3-p text-white-01 sm:font-bold font-semibold md:pr-6 md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">
                                 Let’s get you a distributor
                             </h2>
                         </div>
-                        <div class="flex sm:flex-row flex-col md:gap-36 sm:gap-10 gap-6 items-center">
+                        <div data-aos="fade-up" class="flex sm:flex-row flex-col md:gap-36 sm:gap-10 gap-6 items-center">
                             <div class="basis-1/2 outline outline-offset-[9px] outline-white outline-1 rounded-full relative">
                                 <img src="assets/image_11.png" class="sm:h-auto h-[300px]" alt="image_11.png" />
                                 <div class="absolute top-0 left-0 h-full w-full outline outline-offset-[-9px] outline-white outline-1 rounded-full"></div>
@@ -1220,13 +1223,13 @@
             <!-- event -->
             <section id="event" class="flexCenter paddingX bg-primary-07 px-4">
                 <div class="xl:max-w-[1280px] paddingY w-full">
-                    <div class="flex pb-16">
+                    <div data-aos="fade-up" class="flex pb-16">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-secondary-02 md:pr-6 md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">
                             Event
                         </h2>
                         <div class="box-border w-full p-4 border-b-[1px] border-white-03 flex-1 md:block hidden"></div>
                     </div>
-                    <div id="orlando-speaker" class="pb-16">
+                    <div data-aos="fade-up" id="orlando-speaker" class="pb-16">
                         <h3 class="sm:text-h3 text-h5-p text-secondary-02 sm:font-bold font-medium sm:text-center text-start">
                             Orlando Leadership Summit Speakers
                         </h3>
@@ -1235,7 +1238,7 @@
                                 <div class="absolute pointer-events-none left-4 top-4 w-full h-full border border-secondary-04 z-10 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[19px] rounded-bl-[19px] md:block hidden"></div>
                                 <div class="absolute pointer-events-none -left-4 -top-4 w-full h-full border border-secondary-04 z-20 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[19px] rounded-bl-[19px] md:block hidden"></div>
                                 <div class="bg-theme sm:rounded-tl-[50px] rounded-tl-[25px] sm:rounded-br-[50px] rounded-br-[25px] rounded-tr-[19px] rounded-bl-[19px] overflow-hidden">
-                                    <div id="event_carousel" class="relative cursor-pointer">
+                                    <div data-aos="fade-up" id="event_carousel" class="relative cursor-pointer">
                                         <div class="relative sm:h-[600px] h-[720px]  overflow-hidden">
                                             <div id="event-item-1" class="hidden duration-700 ease-in-out" data-carousel-item="active">
                                                 <div class="flex flex-col h-full justify-center items-center sm:py-16 md:px-28 sm:px-16 px-4 py-4 gap-4">
@@ -1386,7 +1389,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center items-center gap-4 pt-32">
+                        <div data-aos="fade-up" class="flex justify-center items-center gap-4 md:pt-32 pt-4">
                             <button id="event-indicator-1" type="button" class="sm:w-3 sm:h-3  w-[8px] h-[8px] rounded-full " aria-current="true" aria-label="Slide 1"></button>
                             <button id="event-indicator-2" type="button" class="sm:w-3 sm:h-3  w-[8px] h-[8px] rounded-full" aria-current="false" aria-label="Slide 2"></button>
                             <button id="event-indicator-3" type="button" class="sm:w-3 sm:h-3  w-[8px] h-[8px] rounded-full" aria-current="false" aria-label="Slide 3"></button>
@@ -1395,11 +1398,11 @@
                     </div>
 
                     <div id="orlando-summit" class=""> 
-                        <h3 class="sm:text-h3 text-h5-p text-secondary-02 sm:font-bold font-medium sm:text-center text-start py-16">
+                        <h3 data-aos="fade-up" class="sm:text-h3 text-h5-p text-secondary-02 sm:font-bold font-medium sm:text-center text-start py-16">
                             Orlando Leadership Summit
                         </h3>
                         <div class="flex flex-col pt-4 md:gap-28 sm:gap-16 gap-7">
-                            <div id="thursday">
+                            <div data-aos="fade-up" id="thursday">
                                 <h2 class="sm:text-h4 text-subtitle-1 text-secondary-01 sm:font-bold font-medium sm:pb-8 pb-4">
                                     Thursday January 13,2022
                                 </h2>
@@ -1498,7 +1501,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="thursday">
+                            <div data-aos="fade-up" id="thursday">
                                 <h2 class="sm:text-h4 text-subtitle-1 text-secondary-01 sm:font-bold font-medium sm:pb-8 pb-4">
                                     Thursday January 13,2022
                                 </h2>
@@ -1597,7 +1600,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="thursday">
+                            <div data-aos="fade-up" id="thursday">
                                 <h2 class="sm:text-h4 text-subtitle-1 text-secondary-01 sm:font-bold font-medium sm:pb-8 pb-4">
                                     Thursday January 13,2022
                                 </h2>
@@ -1705,15 +1708,15 @@
             <section id="testimonial" class="flexCenter paddingX bg-theme px-4 relative">
                 <div class="absolute top-30% left-auto w-[30%] h-[60%] rounded-full primary__gradient"></div>
                 <div class="xl:max-w-[1280px] paddingY w-full">
-                    <div class="flex sm:pb-36 pb-16">
+                    <div data-aos="fade-up" class="flex sm:pb-36 pb-16">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-white-02 md:pr-6 md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">
                             Testimonial
                         </h2>
                         <div class="box-border w-full p-4 border-b-[1px] border-white-03 flex-1 md:block hidden"></div>
                     </div>
-                    <div class="flex w-full justify-center">
+                    <div data-aos="fade-up" class="flex w-full justify-center">
                         <div class="sm:w-4/5 w-full bg-primary-07 rounded sm:outline sm:outline-offset-[10px] outline-1 outline-white-01">
-                            <div id="testimony" class="relative cursor-pointer">
+                            <div data-aos="fade-up" id="testimony" class="relative cursor-pointer">
                                 <!-- Carousel wrapper -->
                                 <div class="relative h-56 overflow-hidden rounded-lg md:h-[400px] sm:h-[350px] ss:h-[350px] h-[400px] outline-1 outline-white-01 sm:outline-offset-[10px]">
                                     <!-- item 1 -->
@@ -1963,7 +1966,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-center items-center gap-4 sm:pt-36 pt-10">
+                    <div data-aos="fade-up" class="flex justify-center items-center gap-4 sm:pt-36 pt-10">
                         <button id="testimony-indicator-1" type="button" class="sm:w-3 sm:h-3  w-[8px] h-[8px] rounded-full " aria-current="true" aria-label="Slide 1"></button>
                         <button id="testimony-indicator-2" type="button" class="sm:w-3 sm:h-3  w-[8px] h-[8px] rounded-full" aria-current="false" aria-label="Slide 2"></button>
                         <button id="testimony-indicator-3" type="button" class="sm:w-3 sm:h-3  w-[8px] h-[8px] rounded-full" aria-current="false" aria-label="Slide 3"></button>
@@ -1975,14 +1978,14 @@
             <!-- contact -->
             <section id="contact" class="flexCenter paddingX bg-primary-08 px-4">
                 <div class="xl:max-w-[1280px] paddingY w-full">
-                    <div class="flex">
+                    <div data-aos="fade-up" class="flex">
                         <h2 class="sm:text-h2 text-h3-p sm:font-bold font-semibold text-secondary-02 md:pr-6 md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">
                             Contact
                         </h2>
                         <div class="box-border w-full p-4 border-b-[1px] border-white-03 flex-1 md:block hidden"></div>
                     </div>
                     <div class="flex md:flex-row flex-col gap-10 pt-20 items-center">
-                        <div class="basis-1/2 rounded relative">
+                        <div data-aos="fade-up" class="basis-1/2 rounded relative">
                             <img
                                 src="assets/map.png"
                                 class="drop-shadow-[0_8px_24px_rgba(0,0,0,0.15)]"
@@ -1990,7 +1993,7 @@
                             <div class="absolute pointer-events-none left-4 top-4 w-full h-full border border-secondary-04 z-10 rounded sm:block hidden"></div>
                             <div class="absolute pointer-events-none -left-4 -top-4 w-full h-full border border-secondary-04 z-20 rounded sm:block hidden"></div>
                         </div>
-                        <div class="basis-1/2 flex justify-center">
+                        <div data-aos="fade-up" class="basis-1/2 flex justify-center">
                             <div class="flex flex-col md:px-16">
                                 <h3 class="sm:text-h3 text-h6-p text-secondary-02 sm:font-medium font-semibold">
                                     We would be happy to answer your questions
@@ -2146,8 +2149,8 @@
     <script>
         AOS.init({
             offset: 200,
-            duration: 300,
-            easing: 'ease-in-sine',
+            duration: 800,
+            easing: 'ease-in-out-back',
         });
     $(document).ready(function () {
         selected_btn_icon = $('#selected_btn_icon')
@@ -2309,7 +2312,7 @@
             section = $($(this).attr('href'));
 
             $('html, body').animate({
-                scrollTop: section.offset().top
+                scrollTop: section.offset().top + 1
             }, {
                 duration: "slow",
                 easing: "easeInSine"

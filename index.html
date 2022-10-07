@@ -833,9 +833,9 @@
                         <div data-aos="fade-up" class="w-full flex justify-start pb-16">
                             <h2 class="sm:text-h2 text-h3-p text-white-01 sm:font-bold font-semibold md:border-none md:flex-none flex-1 border-b border-white-03 md:text-start text-center">Our enrollment package</h2>
                         </div>
-                        <div class="flex flex-col w-full">
+                        <div data-aos="fade-up" class="flex flex-col w-full">
                             <div class="grid gap-4 md:grid-cols-4 sm:grid-cols-2 grid-col-1 auto-rows-max gap-x-6 w-full">
-                                <div data-aos="fade-up" class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
+                                <div class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
                                     <div class="pb-6">
                                         <span class="text-h4 text-secondary-03 font-bold leading-none">$</span>
                                         <span class="text-h1 text-secondary-02 font-bold leading-none">150</span>
@@ -892,7 +892,7 @@
                                         </button>
                                     </h5>
                                 </div>
-                                <div data-aos="fade-up" class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
+                                <div  class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
                                     <div class="pb-6">
                                         <span class="text-h4 text-secondary-03 font-bold leading-none">$</span>
                                         <span class="text-h1 text-secondary-02 font-bold leading-none">150</span>
@@ -949,7 +949,7 @@
                                         </button>
                                     </h5>
                                 </div>
-                                <div data-aos="fade-up" class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
+                                <div class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
                                     <div class="pb-6">
                                         <span class="text-h4 text-secondary-03 font-bold leading-none">$</span>
                                         <span class="text-h1 text-secondary-02 font-bold leading-none">150</span>
@@ -1006,7 +1006,7 @@
                                         </button>
                                     </h5>
                                 </div>
-                                <div data-aos="fade-up" class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
+                                <div class="flex flex-col items-start bg-white-01 transition duration-200 px-10 py-20 rounded-lg md:hover:bg-primary-05 md:hover:scale-110 md:hover:rounded-tl-[50px] md:hover:rounded-br-[50px] md:cursor-pointer">
                                     <div class="pb-6">
                                         <span class="text-h4 text-secondary-03 font-bold leading-none">$</span>
                                         <span class="text-h1 text-secondary-02 font-bold leading-none">150</span>
@@ -2152,175 +2152,175 @@
             duration: 800,
             easing: 'ease-in-out-back',
         });
-    $(document).ready(function () {
-        selected_btn_icon = $('#selected_btn_icon')
-        selected_name = $('#selected_name')
-        dropdown = $('#dropdown-states');
+        $(document).ready(function () {
+            selected_btn_icon = $('#selected_btn_icon')
+            selected_name = $('#selected_name')
+            dropdown = $('#dropdown-states');
 
-        const testimony_items = [
-            {
-                position: 0,
-                el: document.getElementById('testimony-item-1')
-            },
-            {
-                position: 1,
-                el: document.getElementById('testimony-item-2')
-            },
-            {
-                position: 2,
-                el: document.getElementById('testimony-item-3')
-            },
-            {
-                position: 3,
-                el: document.getElementById('testimony-item-4')
-            },
-        ];
+            const testimony_items = [
+                {
+                    position: 0,
+                    el: document.getElementById('testimony-item-1')
+                },
+                {
+                    position: 1,
+                    el: document.getElementById('testimony-item-2')
+                },
+                {
+                    position: 2,
+                    el: document.getElementById('testimony-item-3')
+                },
+                {
+                    position: 3,
+                    el: document.getElementById('testimony-item-4')
+                },
+            ];
 
-        const testimony_options = {
-            activeItemPosition: 1,
-            interval: 5000,
+            const testimony_options = {
+                activeItemPosition: 1,
+                interval: 5000,
+                
+                indicators: {
+                    activeClasses: 'bg-secondary-04 sm:p-[8px] p-[6px]',
+                    inactiveClasses: 'bg-secondary-05 transition ease-in-out delay-1500',
+                    items: [
+                        {
+                            position: 0,
+                            el: document.getElementById('testimony-indicator-1')
+                        },
+                        {
+                            position: 1,
+                            el: document.getElementById('testimony-indicator-2')
+                        },
+                        {
+                            position: 2,
+                            el: document.getElementById('testimony-indicator-3')
+                        },
+                        {
+                            position: 3,
+                            el: document.getElementById('testimony-indicator-4')
+                        },
+                    ]
+                },
+            };
             
-            indicators: {
-                activeClasses: 'bg-secondary-04 sm:p-[8px] p-[6px]',
-                inactiveClasses: 'bg-secondary-05 transition ease-in-out delay-1500',
-                items: [
-                    {
-                        position: 0,
-                        el: document.getElementById('testimony-indicator-1')
-                    },
-                    {
-                        position: 1,
-                        el: document.getElementById('testimony-indicator-2')
-                    },
-                    {
-                        position: 2,
-                        el: document.getElementById('testimony-indicator-3')
-                    },
-                    {
-                        position: 3,
-                        el: document.getElementById('testimony-indicator-4')
-                    },
-                ]
-            },
-        };
-        
-        const event_items = [
-            {
-                position: 0,
-                el: document.getElementById('event-item-1')
-            },
-            {
-                position: 1,
-                el: document.getElementById('event-item-2')
-            },
-            {
-                position: 2,
-                el: document.getElementById('event-item-3')
-            },
-            {
-                position: 3,
-                el: document.getElementById('event-item-4')
-            },
-        ];
+            const event_items = [
+                {
+                    position: 0,
+                    el: document.getElementById('event-item-1')
+                },
+                {
+                    position: 1,
+                    el: document.getElementById('event-item-2')
+                },
+                {
+                    position: 2,
+                    el: document.getElementById('event-item-3')
+                },
+                {
+                    position: 3,
+                    el: document.getElementById('event-item-4')
+                },
+            ];
 
-        const event_options = {
-            activeItemPosition: 1,
-            interval: 5000,
+            const event_options = {
+                activeItemPosition: 1,
+                interval: 5000,
+                
+                indicators: {
+                    activeClasses: 'bg-secondary-04 sm:p-[8px] p-[6px]',
+                    inactiveClasses: 'bg-secondary-05 transition ease-in-out delay-1500',
+                    items: [
+                        {
+                            position: 0,
+                            el: document.getElementById('event-indicator-1')
+                        },
+                        {
+                            position: 1,
+                            el: document.getElementById('event-indicator-2')
+                        },
+                        {
+                            position: 2,
+                            el: document.getElementById('event-indicator-3')
+                        },
+                        {
+                            position: 3,
+                            el: document.getElementById('event-indicator-4')
+                        },
+                    ]
+                },
+            };
             
-            indicators: {
-                activeClasses: 'bg-secondary-04 sm:p-[8px] p-[6px]',
-                inactiveClasses: 'bg-secondary-05 transition ease-in-out delay-1500',
-                items: [
-                    {
-                        position: 0,
-                        el: document.getElementById('event-indicator-1')
-                    },
-                    {
-                        position: 1,
-                        el: document.getElementById('event-indicator-2')
-                    },
-                    {
-                        position: 2,
-                        el: document.getElementById('event-indicator-3')
-                    },
-                    {
-                        position: 3,
-                        el: document.getElementById('event-indicator-4')
-                    },
-                ]
-            },
-        };
+            const testimony_carousel = new Carousel(testimony_items, testimony_options);
+            const event = new Carousel(event_items, event_options);
+            testimony_carousel.cycle()
+            event.cycle()
+
         
-        const testimony_carousel = new Carousel(testimony_items, testimony_options);
-        const event = new Carousel(event_items, event_options);
-        testimony_carousel.cycle()
-        event.cycle()
+            $('.ui-loader').hide();
 
-    
-        $('.ui-loader').hide();
+            $('#testimony-prev').on('click', function() {
+                testimony_carousel.prev();
+            });
 
-        $('#testimony-prev').on('click', function() {
-            testimony_carousel.prev();
-        });
+            $('#testimony-next').on('click', function() {
+                testimony_carousel.next();
+            });
 
-        $('#testimony-next').on('click', function() {
-            testimony_carousel.next();
-        });
+            $('#testimony').on("swipeleft", function(e){
+                testimony_carousel.next();
+            });
 
-        $('#testimony').on("swipeleft", function(e){
-            testimony_carousel.next();
-        });
+            $('#testimony').on("swiperight", function(e){
+                testimony_carousel.prev();
+            });
 
-        $('#testimony').on("swiperight", function(e){
-            testimony_carousel.prev();
-        });
-
-        $('#event_carousel').on("swipeleft", function(e){
-            event.next();
-        });
-        
-        $('#event_carousel').on("swiperight", function(e){
-            event.prev();
-        });
-
-        $('#prod-btn').on('click', function () {
-            prod_p = $('#prod-p'); 
-            prod_btn = $(this);
+            $('#event_carousel').on("swipeleft", function(e){
+                event.next();
+            });
             
+            $('#event_carousel').on("swiperight", function(e){
+                event.prev();
+            });
 
-            if ( prod_p.hasClass("clamp-4") ) {
-                prod_p.removeClass('clamp-4');
-                prod_btn.text('Read Less');
-            } else {
-                prod_p.addClass('clamp-4');
-                prod_btn.text('Read More');
-            }
-        });
-    
-        $('#dropdown-states ul li button').on('click', function () {
-            selected_btn_icon.attr('icon', $(this).attr('data-icon'));
-            selected_name.text($(this).attr('data-name'));
-            $('#selected_btn').trigger('click');
-        });
+            $('#prod-btn').on('click', function () {
+                prod_p = $('#prod-p'); 
+                prod_btn = $(this);
+                
 
-        $('#dropdown-lang ul li button').on('click', function () {
-            $('#selected_lang_icon').attr('icon', $(this).attr('data-icon'));
-            $('#selected_lang_btn').trigger('click');
-        });
+                if ( prod_p.hasClass("clamp-4") ) {
+                    prod_p.removeClass('clamp-4');
+                    prod_btn.text('Read Less');
+                } else {
+                    prod_p.addClass('clamp-4');
+                    prod_btn.text('Read More');
+                }
+            });
+        
+            $('#dropdown-states ul li button').on('click', function () {
+                selected_btn_icon.attr('icon', $(this).attr('data-icon'));
+                selected_name.text($(this).attr('data-name'));
+                $('#selected_btn').trigger('click');
+            });
 
-        $("#nav-list a").click(function(event) {
-            section = $($(this).attr('href'));
+            $('#dropdown-lang ul li button').on('click', function () {
+                $('#selected_lang_icon').attr('icon', $(this).attr('data-icon'));
+                $('#selected_lang_btn').trigger('click');
+            });
 
-            $('html, body').animate({
-                scrollTop: section.offset().top + 1
-            }, {
-                duration: "slow",
-                easing: "easeInSine"
+            $("#nav-list a").click(function(event) {
+                section = $($(this).attr('href'));
+
+                $('html, body').animate({
+                    scrollTop: section.offset().top + 1
+                }, {
+                    duration: "slow",
+                    easing: "easeInSine"
+                });
             });
         });
-    });
 
-    $(window).scroll(function (event) {
+        $(window).scroll(function (event) {
             var st = $(this).scrollTop()
             sections = ['hero', 'about', 'product', 'opportunity', 'event', 'testimonial', 'contact']
             isLight = ['hero', 'about', 'opportunity','testimonial']
